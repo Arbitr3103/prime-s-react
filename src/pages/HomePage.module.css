@@ -3,9 +3,14 @@
 }
 
 .container {
-  max-width: var(--container-max-width);
+  max-width: 1200px; /* Увеличенная ширина контейнера */
   margin: 0 auto;
   padding: 0 var(--container-padding);
+}
+
+/* Каталог имеет особый контейнер, почти на всю ширину */
+.catalogSection .container {
+  max-width: 1400px;
 }
 
 /* Hero секция */
@@ -114,8 +119,9 @@
 .catalogGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-3xl);
+  gap: var(--spacing-2xl);
   margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 @media (max-width: 1024px) {
@@ -142,42 +148,44 @@
 
 .cardImage {
   width: 100%;
-  height: 280px;
-  background-color: #f5f5f5;
-  margin-bottom: var(--spacing-xl);
+  height: 250px;
+  background-color: transparent;
+  margin-bottom: var(--spacing-md);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: var(--border-radius-md);
 }
 
 .cardImage img {
-  width: 100%;
+  width: 80%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .cardTitle {
   font-size: var(--font-size-lg);
   font-weight: 400;
   color: var(--color-text-dark);
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 var(--spacing-md) 0;
+  text-align: center;
 }
 
 .cardButton {
   display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-2xl);
+  padding: var(--spacing-sm) var(--spacing-xl);
   background-color: #000000;
   color: var(--color-white);
   font-weight: 600;
   font-size: var(--font-size-sm);
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 3px;
   text-align: center;
   transition: all var(--transition-base);
   letter-spacing: 1px;
+  width: 150px;
 }
 
 .cardButton:hover {
