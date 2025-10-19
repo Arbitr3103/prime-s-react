@@ -1,6 +1,6 @@
 .header {
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-md);
+  background-color: #000000;
+  box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -21,19 +21,19 @@
 
 /* Логотип */
 .logo {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color var(--transition-fast);
 }
 
-.logo:hover {
-  color: var(--color-primary-dark);
+.logoImg {
+  height: 50px;
+  width: auto;
+  transition: opacity var(--transition-fast);
 }
 
-.logoText {
-  letter-spacing: 1px;
+.logoImg:hover {
+  opacity: 0.8;
 }
 
 /* Навигация */
@@ -44,8 +44,8 @@
 }
 
 .navLink {
-  color: var(--color-text-dark);
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 400;
   font-size: var(--font-size-base);
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -53,22 +53,30 @@
 }
 
 .navLink:hover {
-  color: var(--color-primary);
+  color: #cccccc;
 }
 
-.navLink::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: width var(--transition-base);
+/* Социальные иконки */
+.socialIcons {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
 }
 
-.navLink:hover::after {
-  width: 100%;
+.socialIcon {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
 }
 
 /* Кнопка мобильного меню */
@@ -87,7 +95,7 @@
 .hamburgerLine {
   width: 100%;
   height: 3px;
-  background-color: var(--color-text-dark);
+  background-color: #ffffff;
   border-radius: 2px;
   transition: all var(--transition-base);
 }
@@ -130,6 +138,10 @@
 /* Адаптивность */
 @media (max-width: 768px) {
   .nav {
+    display: none;
+  }
+
+  .socialIcons {
     display: none;
   }
 

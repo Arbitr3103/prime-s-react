@@ -10,16 +10,13 @@ function HomePage() {
       <section className={styles.heroSection}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>PRIME-S</h1>
+            <h1 className={styles.heroTitle}>ПраймСтрой</h1>
             <p className={styles.heroSubtitle}>
-              Производство и продажа строительных материалов
+              КАЧЕСТВО, НАДЕЖНОСТЬ И ДОВЕРИЕ
             </p>
             <p className={styles.heroDescription}>
-              Качественные материалы для вашего строительства
+              Реализация сэндвич - панелей, профнастила, доборных элементов. Изделия из металла за 1 день!
             </p>
-            <a href="#catalog" className={styles.heroButton}>
-              Смотреть каталог
-            </a>
           </div>
         </div>
       </section>
