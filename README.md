@@ -1,16 +1,106 @@
-# React + Vite
+# PRIME-S React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современный сайт компании PRIME-S, перенесённый с платформы Tilda на React.js.
 
-Currently, two official plugins are available:
+## 🚀 Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - библиотека для создания пользовательских интерфейсов
+- **Vite 7** - быстрый инструмент сборки
+- **React Router DOM 7** - маршрутизация
+- **CSS Modules** - модульные стили
+- **Node.js 22+** - среда выполнения
 
-## React Compiler
+## 📦 Установка
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Требования
 
-## Expanding the ESLint configuration
+- Node.js версии 20.19+ или 22.12+ (рекомендуется 22.20.0)
+- npm 10+
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+## 🛠️ Разработка
+
+Запуск dev-сервера:
+
+```bash
+npm run dev
+```
+
+Сайт будет доступен по адресу: `http://localhost:5173`
+
+## 🏗️ Сборка для продакшена
+
+```bash
+npm run build
+```
+
+Собранные файлы будут в папке `dist/`.
+
+## 👀 Предпросмотр продакшен-сборки
+
+```bash
+npm run preview
+```
+
+## 📁 Структура проекта
+
+```
+prime-s-react/
+├── src/
+│   ├── assets/          # Изображения, иконки, шрифты
+│   ├── components/      # Переиспользуемые UI-компоненты
+│   ├── layout/          # Компоненты макета (Header, Footer, Layout)
+│   ├── pages/           # Страницы приложения
+│   ├── styles/          # Глобальные стили
+│   ├── App.jsx          # Основной компонент с маршрутизацией
+│   ├── main.jsx         # Точка входа
+│   └── index.css        # Глобальные стили и CSS-переменные
+├── public/              # Статические файлы
+└── package.json         # Зависимости проекта
+```
+
+## 📄 Страницы
+
+- **Главная** (`/`) - Основная страница с каталогом продукции
+- **Каталог** (`/catalog`) - Полный каталог продукции
+- **Контакты** (`/contacts`) - Контактная информация
+- **О компании** (`/about`) - Информация о компании
+
+## 🎨 Стилизация
+
+Проект использует CSS Modules для компонентной стилизации и CSS-переменные для единообразия дизайна.
+
+Основные CSS-переменные определены в `src/index.css`:
+- Цвета
+- Шрифты
+- Отступы
+- Радиусы скругления
+- Тени
+- Переходы
+
+## 🚀 Деплой на Netlify
+
+1. Создайте репозиторий на GitHub
+2. Загрузите код в репозиторий
+3. Зайдите на [Netlify](https://app.netlify.com)
+4. Нажмите "Add new site" → "Import an existing project"
+5. Выберите ваш репозиторий
+6. Настройки деплоя:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+7. Нажмите "Deploy site"
+
+## 📞 Контакты
+
+- Телефон: +7 (987) 264-70-00
+- WhatsApp: [Написать](https://api.whatsapp.com/send/?phone=79872647000)
+- Telegram: [@z1ganshin](https://t.me/z1ganshin)
+
+## 📝 Лицензия
+
+© 2025 PRIME-S. Все права защищены.
