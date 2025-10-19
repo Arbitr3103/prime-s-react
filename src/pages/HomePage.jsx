@@ -88,7 +88,9 @@ function HomePage() {
       <section id="catalog" className={styles.catalogSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>КАТАЛОГ ПРОДУКЦИИ</h2>
-          <div className={styles.catalogGrid}>
+          
+          {/* Верхний ряд: 3 товара */}
+          <div className={styles.catalogTopRow}>
             {/* Профнастил */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
@@ -121,7 +123,10 @@ function HomePage() {
                 ПОДРОБНЕЕ
               </a>
             </div>
-
+          </div>
+          
+          {/* Нижний ряд: 2 товара */}
+          <div className={styles.catalogBottomRow}>
             {/* Снегозадержатель трубчатый */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
@@ -144,6 +149,7 @@ function HomePage() {
               </a>
             </div>
           </div>
+          
         </div>
       </section>
 
