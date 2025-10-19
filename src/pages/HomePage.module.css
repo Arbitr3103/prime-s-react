@@ -57,11 +57,30 @@
   background-color: var(--color-white);
 }
 
-.projectsNote {
-  text-align: center;
-  padding: var(--spacing-2xl);
-  background-color: var(--color-gray-light);
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.projectCard {
+  overflow: hidden;
   border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projectImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Секция каталога */
@@ -118,6 +137,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .cardTitle {

@@ -1,4 +1,15 @@
 import styles from './HomePage.module.css';
+import profnastilImg from '../assets/images/products/profnastil.jpg';
+import sandwichImg from '../assets/images/products/sandwich.png';
+import fasonnieImg from '../assets/images/products/fasonnie.jpg';
+import snegozaderImg from '../assets/images/products/snegozader.jpg';
+import vodostokImg from '../assets/images/products/vodostok.jpg';
+import project1 from '../assets/images/projects/project1.jpg';
+import project2 from '../assets/images/projects/project2.jpg';
+import project3 from '../assets/images/projects/project3.jpg';
+import project4 from '../assets/images/projects/project4.jpg';
+import project5 from '../assets/images/projects/project5.jpg';
+import project6 from '../assets/images/projects/project6.jpg';
 
 /**
  * Главная страница сайта
@@ -25,8 +36,25 @@ function HomePage() {
       <section className={styles.projectsSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>НАШИ ОБЪЕКТЫ</h2>
-          <div className={styles.projectsNote}>
-            <p>Здесь будет слайдер с фотографиями выполненных объектов</p>
+          <div className={styles.projectsGrid}>
+            <div className={styles.projectCard}>
+              <img src={project1} alt="Объект 1" className={styles.projectImage} />
+            </div>
+            <div className={styles.projectCard}>
+              <img src={project2} alt="Объект 2" className={styles.projectImage} />
+            </div>
+            <div className={styles.projectCard}>
+              <img src={project3} alt="Объект 3" className={styles.projectImage} />
+            </div>
+            <div className={styles.projectCard}>
+              <img src={project4} alt="Объект 4" className={styles.projectImage} />
+            </div>
+            <div className={styles.projectCard}>
+              <img src={project5} alt="Объект 5" className={styles.projectImage} />
+            </div>
+            <div className={styles.projectCard}>
+              <img src={project6} alt="Объект 6" className={styles.projectImage} />
+            </div>
           </div>
         </div>
       </section>
@@ -39,7 +67,7 @@ function HomePage() {
             {/* Профнастил */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                {/* Здесь будет изображение профнастила */}
+                <img src={profnastilImg} alt="Профнастил" />
               </div>
               <h3 className={styles.cardTitle}>Профнастил</h3>
               <a href="/catalog/profnastil" className={styles.cardButton}>
@@ -50,7 +78,7 @@ function HomePage() {
             {/* Сэндвич-панели */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                {/* Здесь будет изображение сэндвич-панелей */}
+                <img src={sandwichImg} alt="Сэндвич панели" />
               </div>
               <h3 className={styles.cardTitle}>Сэндвич панели</h3>
               <a href="/catalog/sandwpan" className={styles.cardButton}>
@@ -61,7 +89,7 @@ function HomePage() {
             {/* Фасонные элементы */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                {/* Здесь будет изображение фасонных элементов */}
+                <img src={fasonnieImg} alt="Фасонные элементы" />
               </div>
               <h3 className={styles.cardTitle}>Фасонные элементы</h3>
               <a href="/catalog/fasonelement" className={styles.cardButton}>
@@ -72,7 +100,7 @@ function HomePage() {
             {/* Снегозадержатель трубчатый */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                {/* Здесь будет изображение снегозадержателя */}
+                <img src={snegozaderImg} alt="Снегозадержатель трубчатый" />
               </div>
               <h3 className={styles.cardTitle}>Снегозадержатель трубчатый</h3>
               <a href="/catalog/snegozader" className={styles.cardButton}>
@@ -83,7 +111,7 @@ function HomePage() {
             {/* Водосточная система */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                {/* Здесь будет изображение водосточной системы */}
+                <img src={vodostokImg} alt="Водосточная система" />
               </div>
               <h3 className={styles.cardTitle}>Водосточная система</h3>
               <a href="/catalog/vodostsist" className={styles.cardButton}>
