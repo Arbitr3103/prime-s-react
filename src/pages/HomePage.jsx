@@ -141,15 +141,15 @@ function HomePage() {
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>4</div>
-              <p className={styles.whyUsText}>Собственное производство</p>
+              <p className={styles.whyUsText}>Загрузка без длительных очередей</p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>5</div>
-              <p className={styles.whyUsText}>Быстрая доставка по региону</p>
+              <p className={styles.whyUsText}>Опытные специалисты с 10 летним стажем</p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>6</div>
-              <p className={styles.whyUsText}>Свой парк грузового транспорта</p>
+              <p className={styles.whyUsText}>Свой автопарк транспорта для доставок</p>
             </div>
           </div>
         </div>
@@ -161,13 +161,10 @@ function HomePage() {
           <h2 className={styles.sectionTitle}>О компании</h2>
           <div className={styles.aboutContent}>
             <p className={styles.aboutText}>
-              PRIME-S — надежный поставщик качественных строительных материалов. 
-              Мы специализируемся на производстве и продаже сэндвич-панелей, профнастила, 
-              фасонных элементов и комплектующих для кровли.
+              PRIME-S — надёжный поставщик качественных строительных материалов. Мы специализируемся на реализации сэндвич - панелей, профнастила, доборных элементов. Изделия из металла за 1 день!
             </p>
             <p className={styles.aboutText}>
-              Наша цель — предоставить клиентам высококачественную продукцию 
-              по конкурентным ценам с оперативной доставкой.
+              Наша компания работает напрямую с производителями, что позволяет нам предлагать конкурентные цены и гарантировать высокое качество продукции. Мы обеспечиваем быструю доставку по региону собственным транспортом.
             </p>
           </div>
         </div>
@@ -176,37 +173,44 @@ function HomePage() {
       {/* Секция контактов */}
       <section className={styles.contactSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Свяжитесь с нами</h2>
-          <div className={styles.contactContent}>
-            <div className={styles.contactInfo}>
-              <div className={styles.contactItem}>
-                <h3 className={styles.contactTitle}>Телефон</h3>
-                <a href="tel:+79872647000" className={styles.contactLink}>
-                  +7 (987) 264-70-00
-                </a>
-              </div>
-              <div className={styles.contactItem}>
-                <h3 className={styles.contactTitle}>Мессенджеры</h3>
-                <div className={styles.messengers}>
-                  <a 
-                    href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
-                    className={styles.messengerLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    WhatsApp
-                  </a>
-                  <a 
-                    href="https://t.me/z1ganshin"
-                    className={styles.messengerLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Telegram
-                  </a>
-                </div>
-              </div>
+          <h2 className={styles.sectionTitle}>Контакты</h2>
+          <div className={styles.contactGrid}>
+            <div className={styles.contactCard}>
+              <h3 className={styles.contactCardTitle}>Телефон</h3>
+              <a href="tel:+79872647000" className={styles.contactCardLink}>
+                +7 (987) 264-70-00
+              </a>
+              <p className={styles.contactCardText}>Звоните с 9:00 до 18:00</p>
             </div>
+            <div className={styles.contactCard}>
+              <h3 className={styles.contactCardTitle}>WhatsApp</h3>
+              <a 
+                href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
+                className={styles.contactCardLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Написать в WhatsApp
+              </a>
+              <p className={styles.contactCardText}>Быстрый ответ в мессенджере</p>
+            </div>
+            <div className={styles.contactCard}>
+              <h3 className={styles.contactCardTitle}>Telegram</h3>
+              <a 
+                href="https://t.me/z1ganshin"
+                className={styles.contactCardLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Написать в Telegram
+              </a>
+              <p className={styles.contactCardText}>Онлайн консультация</p>
+            </div>
+          </div>
+          <div className={styles.workingHours}>
+            <h3 className={styles.workingHoursTitle}>Режим работы</h3>
+            <p className={styles.workingHoursText}>Понедельник - Пятница: 9:00 - 18:00</p>
+            <p className={styles.workingHoursText}>Суббота - Воскресенье: Выходной</p>
           </div>
         </div>
       </section>
