@@ -1,15 +1,15 @@
-import styles from './HomePage.module.css';
-import profnastilImg from '../assets/images/products/profnastil.jpg'; // Профнастил - черный волнистый
-import sandwichImg from '../assets/images/products/sandwich.png'; // Сэндвич-панели - слоистая панель
-import fasonnieImg from '../assets/images/products/fasonnie.jpg'; // Фасонные элементы - угловой элемент
-import snegozaderImg from '../assets/images/products/snegozader.jpg'; // Снегозадержатель - трубки
-import vodostokImg from '../assets/images/products/vodostok.jpg'; // Водосточная система
-import project1 from '../assets/images/projects/project1.jpg';
-import project2 from '../assets/images/projects/project2.jpg';
-import project3 from '../assets/images/projects/project3.jpg';
-import project4 from '../assets/images/projects/project4.jpg';
-import project5 from '../assets/images/projects/project5.jpg';
-import project6 from '../assets/images/projects/project6.jpg';
+import styles from "./HomePage.module.css";
+import profnastilImg from "../assets/images/products/profnastil.jpg"; // Профнастил - черный волнистый
+import sandwichImg from "../assets/images/products/sandwich.png"; // Сэндвич-панели - слоистая панель
+import fasonnieImg from "../assets/images/products/fasonnie.jpg"; // Фасонные элементы - угловой элемент
+import snegozaderImg from "../assets/images/products/snegozader.jpg"; // Снегозадержатель - трубки
+import vodostokImg from "../assets/images/products/vodostok.jpg"; // Водосточная система
+import project1 from "../assets/images/projects/project1.jpg";
+import project2 from "../assets/images/projects/project2.jpg";
+import project3 from "../assets/images/projects/project3.jpg";
+import project4 from "../assets/images/projects/project4.jpg";
+import project5 from "../assets/images/projects/project5.jpg";
+import project6 from "../assets/images/projects/project6.jpg";
 
 /**
  * Главная страница сайта
@@ -26,7 +26,8 @@ function HomePage() {
               КАЧЕСТВО, НАДЕЖНОСТЬ И ДОВЕРИЕ
             </p>
             <p className={styles.heroDescription}>
-              Реализация сэндвич - панелей, профнастила, доборных элементов. Изделия из металла за 1 день!
+              Реализация сэндвич - панелей, профнастила, доборных элементов.
+              Изделия из металла за 1 день!
             </p>
           </div>
         </div>
@@ -38,22 +39,46 @@ function HomePage() {
           <h2 className={styles.sectionTitle}>НАШИ ОБЪЕКТЫ</h2>
           <div className={styles.projectsGrid}>
             <div className={styles.projectCard}>
-              <img src={project1} alt="Объект 1" className={styles.projectImage} />
+              <img
+                src={project1}
+                alt="Объект 1"
+                className={styles.projectImage}
+              />
             </div>
             <div className={styles.projectCard}>
-              <img src={project2} alt="Объект 2" className={styles.projectImage} />
+              <img
+                src={project2}
+                alt="Объект 2"
+                className={styles.projectImage}
+              />
             </div>
             <div className={styles.projectCard}>
-              <img src={project3} alt="Объект 3" className={styles.projectImage} />
+              <img
+                src={project3}
+                alt="Объект 3"
+                className={styles.projectImage}
+              />
             </div>
             <div className={styles.projectCard}>
-              <img src={project4} alt="Объект 4" className={styles.projectImage} />
+              <img
+                src={project4}
+                alt="Объект 4"
+                className={styles.projectImage}
+              />
             </div>
             <div className={styles.projectCard}>
-              <img src={project5} alt="Объект 5" className={styles.projectImage} />
+              <img
+                src={project5}
+                alt="Объект 5"
+                className={styles.projectImage}
+              />
             </div>
             <div className={styles.projectCard}>
-              <img src={project6} alt="Объект 6" className={styles.projectImage} />
+              <img
+                src={project6}
+                alt="Объект 6"
+                className={styles.projectImage}
+              />
             </div>
           </div>
         </div>
@@ -129,27 +154,39 @@ function HomePage() {
           <div className={styles.whyUsGrid}>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>1</div>
-              <p className={styles.whyUsText}>Большой выбор металлопроката в наличии</p>
+              <p className={styles.whyUsText}>
+                Большой выбор металлопроката в наличии
+              </p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>2</div>
-              <p className={styles.whyUsText}>Вся наша продукция имеет сертификацию</p>
+              <p className={styles.whyUsText}>
+                Вся наша продукция имеет сертификацию
+              </p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>3</div>
-              <p className={styles.whyUsText}>Гибкие цены, персональный подход</p>
+              <p className={styles.whyUsText}>
+                Гибкие цены, персональный подход
+              </p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>4</div>
-              <p className={styles.whyUsText}>Загрузка без длительных очередей</p>
+              <p className={styles.whyUsText}>
+                Загрузка без длительных очередей
+              </p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>5</div>
-              <p className={styles.whyUsText}>Опытные специалисты с 10 летним стажем</p>
+              <p className={styles.whyUsText}>
+                Опытные специалисты с 10 летним стажем
+              </p>
             </div>
             <div className={styles.whyUsItem}>
               <div className={styles.whyUsNumber}>6</div>
-              <p className={styles.whyUsText}>Свой автопарк транспорта для доставок</p>
+              <p className={styles.whyUsText}>
+                Свой автопарк транспорта для доставок
+              </p>
             </div>
           </div>
         </div>
@@ -161,10 +198,15 @@ function HomePage() {
           <h2 className={styles.sectionTitle}>О компании</h2>
           <div className={styles.aboutContent}>
             <p className={styles.aboutText}>
-              PRIME-S — надёжный поставщик качественных строительных материалов. Мы специализируемся на реализации сэндвич - панелей, профнастила, доборных элементов. Изделия из металла за 1 день!
+              PRIME-S — надёжный поставщик качественных строительных материалов.
+              Мы специализируемся на реализации сэндвич - панелей, профнастила,
+              доборных элементов. Изделия из металла за 1 день!
             </p>
             <p className={styles.aboutText}>
-              Наша компания работает напрямую с производителями, что позволяет нам предлагать конкурентные цены и гарантировать высокое качество продукции. Мы обеспечиваем быструю доставку по региону собственным транспортом.
+              Наша компания работает напрямую с производителями, что позволяет
+              нам предлагать конкурентные цены и гарантировать высокое качество
+              продукции. Мы обеспечиваем быструю доставку по региону собственным
+              транспортом.
             </p>
           </div>
         </div>
@@ -184,7 +226,7 @@ function HomePage() {
             </div>
             <div className={styles.contactCard}>
               <h3 className={styles.contactCardTitle}>WhatsApp</h3>
-              <a 
+              <a
                 href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
                 className={styles.contactCardLink}
                 target="_blank"
@@ -192,11 +234,13 @@ function HomePage() {
               >
                 Написать в WhatsApp
               </a>
-              <p className={styles.contactCardText}>Быстрый ответ в мессенджере</p>
+              <p className={styles.contactCardText}>
+                Быстрый ответ в мессенджере
+              </p>
             </div>
             <div className={styles.contactCard}>
               <h3 className={styles.contactCardTitle}>Telegram</h3>
-              <a 
+              <a
                 href="https://t.me/z1ganshin"
                 className={styles.contactCardLink}
                 target="_blank"
@@ -209,8 +253,12 @@ function HomePage() {
           </div>
           <div className={styles.workingHours}>
             <h3 className={styles.workingHoursTitle}>Режим работы</h3>
-            <p className={styles.workingHoursText}>Понедельник - Пятница: 9:00 - 18:00</p>
-            <p className={styles.workingHoursText}>Суббота - Воскресенье: Выходной</p>
+            <p className={styles.workingHoursText}>
+              Понедельник - Пятница: 9:00 - 18:00
+            </p>
+            <p className={styles.workingHoursText}>
+              Суббота - Воскресенье: Выходной
+            </p>
           </div>
         </div>
       </section>
