@@ -1,0 +1,209 @@
+.aboutPage {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Заголовок страницы */
+.headerSection {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
+}
+
+.pageDescription {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Основной контент */
+.contentSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-background-alt);
+}
+
+.infoBlock {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.blockTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.blockContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.text {
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+/* Продукция */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.productItem {
+  padding: var(--spacing-lg);
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-base);
+}
+
+.productItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.productTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.productText {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Преимущества */
+.advantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.advantageItem {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.advantageIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.advantageTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.advantageText {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Призыв к действию */
+.ctaBlock {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-3xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.ctaTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
+}
+
+.ctaText {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .headerSection {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .contentSection {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .infoBlock {
+    padding: var(--spacing-lg);
+  }
+
+  .productsGrid,
+  .advantagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBlock {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+}

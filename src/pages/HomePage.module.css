@@ -1,0 +1,244 @@
+.homePage {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Hero секция */
+.heroSection {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.95;
+}
+
+.heroDescription {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
+  opacity: 0.9;
+}
+
+.heroButton {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-lg);
+}
+
+.heroButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Секция каталога */
+.catalogSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-text-dark);
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.catalogCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-gray-light);
+}
+
+.catalogCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardContent {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-height: 200px;
+}
+
+.cardTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.cardDescription {
+  flex: 1;
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cardButton {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  transition: all var(--transition-base);
+  align-self: flex-start;
+}
+
+.cardButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateX(4px);
+}
+
+/* Секция "О компании" */
+.aboutSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-background-alt);
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutText {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.aboutText:last-child {
+  margin-bottom: 0;
+}
+
+/* Секция контактов */
+.contactSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.contactContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.contactItem {
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dark);
+}
+
+.contactLink {
+  display: inline-block;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--color-primary-dark);
+}
+
+.messengers {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.messengerLink {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.messengerLink:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .catalogGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogSection,
+  .aboutSection,
+  .contactSection {
+    padding: var(--spacing-2xl) 0;
+  }
+}
