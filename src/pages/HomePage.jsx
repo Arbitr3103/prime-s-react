@@ -21,74 +21,107 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Секция "Наши объекты" */}
+      <section className={styles.projectsSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>НАШИ ОБЪЕКТЫ</h2>
+          <div className={styles.projectsNote}>
+            <p>Здесь будет слайдер с фотографиями выполненных объектов</p>
+          </div>
+        </div>
+      </section>
+
       {/* Секция каталога */}
       <section id="catalog" className={styles.catalogSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Наша продукция</h2>
+          <h2 className={styles.sectionTitle}>КАТАЛОГ ПРОДУКЦИИ</h2>
           <div className={styles.catalogGrid}>
-            {/* Сэндвич-панели */}
-            <div className={styles.catalogCard}>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Сэндвич-панели</h3>
-                <p className={styles.cardDescription}>
-                  Современные строительные материалы для быстрого возведения зданий
-                </p>
-                <a href="/catalog/sandwpan" className={styles.cardButton}>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-
             {/* Профнастил */}
             <div className={styles.catalogCard}>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Профнастил</h3>
-                <p className={styles.cardDescription}>
-                  Надежный материал для кровли и облицовки фасадов
-                </p>
-                <a href="/catalog/profnastil" className={styles.cardButton}>
-                  Подробнее
-                </a>
+              <div className={styles.cardImage}>
+                {/* Здесь будет изображение профнастила */}
               </div>
+              <h3 className={styles.cardTitle}>Профнастил</h3>
+              <a href="/catalog/profnastil" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
+            </div>
+
+            {/* Сэндвич-панели */}
+            <div className={styles.catalogCard}>
+              <div className={styles.cardImage}>
+                {/* Здесь будет изображение сэндвич-панелей */}
+              </div>
+              <h3 className={styles.cardTitle}>Сэндвич панели</h3>
+              <a href="/catalog/sandwpan" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
             </div>
 
             {/* Фасонные элементы */}
             <div className={styles.catalogCard}>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Фасонные элементы</h3>
-                <p className={styles.cardDescription}>
-                  Доборные элементы для завершения кровельных работ
-                </p>
-                <a href="/catalog/fasonelement" className={styles.cardButton}>
-                  Подробнее
-                </a>
+              <div className={styles.cardImage}>
+                {/* Здесь будет изображение фасонных элементов */}
               </div>
+              <h3 className={styles.cardTitle}>Фасонные элементы</h3>
+              <a href="/catalog/fasonelement" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
             </div>
 
-            {/* Снегозадержатели */}
+            {/* Снегозадержатель трубчатый */}
             <div className={styles.catalogCard}>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Снегозадержатели</h3>
-                <p className={styles.cardDescription}>
-                  Системы безопасности для защиты от схода снега с крыши
-                </p>
-                <a href="/catalog/snegozader" className={styles.cardButton}>
-                  Подробнее
-                </a>
+              <div className={styles.cardImage}>
+                {/* Здесь будет изображение снегозадержателя */}
               </div>
+              <h3 className={styles.cardTitle}>Снегозадержатель трубчатый</h3>
+              <a href="/catalog/snegozader" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
             </div>
 
-            {/* Водосточные системы */}
+            {/* Водосточная система */}
             <div className={styles.catalogCard}>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Водосточные системы</h3>
-                <p className={styles.cardDescription}>
-                  Эффективный отвод воды для защиты вашего здания
-                </p>
-                <a href="/catalog/vodostsist" className={styles.cardButton}>
-                  Подробнее
-                </a>
+              <div className={styles.cardImage}>
+                {/* Здесь будет изображение водосточной системы */}
               </div>
+              <h3 className={styles.cardTitle}>Водосточная система</h3>
+              <a href="/catalog/vodostsist" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Секция "Почему выбирают нас" */}
+      <section className={styles.whyUsSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitleWhite}>Почему выбирают нас</h2>
+          <div className={styles.whyUsGrid}>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>1</div>
+              <p className={styles.whyUsText}>Большой выбор металлопроката в наличии</p>
+            </div>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>2</div>
+              <p className={styles.whyUsText}>Вся наша продукция имеет сертификацию</p>
+            </div>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>3</div>
+              <p className={styles.whyUsText}>Гибкие цены, персональный подход</p>
+            </div>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>4</div>
+              <p className={styles.whyUsText}>Собственное производство</p>
+            </div>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>5</div>
+              <p className={styles.whyUsText}>Быстрая доставка по региону</p>
+            </div>
+            <div className={styles.whyUsItem}>
+              <div className={styles.whyUsNumber}>6</div>
+              <p className={styles.whyUsText}>Свой парк грузового транспорта</p>
             </div>
           </div>
         </div>

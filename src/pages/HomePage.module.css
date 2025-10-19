@@ -51,10 +51,23 @@
   line-height: 1.6;
 }
 
+/* Секция "Наши объекты" */
+.projectsSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.projectsNote {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+}
+
 /* Секция каталога */
 .catalogSection {
   padding: var(--spacing-3xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-white);
 }
 
 .sectionTitle {
@@ -63,67 +76,121 @@
   font-weight: 700;
   margin-bottom: var(--spacing-2xl);
   color: var(--color-text-dark);
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-text-dark);
 }
 
 .catalogGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .catalogCard {
   background-color: var(--color-white);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
+  text-align: center;
   transition: all var(--transition-base);
-  border: 1px solid var(--color-gray-light);
 }
 
 .catalogCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
 
-.cardContent {
-  padding: var(--spacing-xl);
+.cardImage {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-gray-light);
+  margin-bottom: var(--spacing-lg);
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  min-height: 200px;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardTitle {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: 400;
   color: var(--color-text-dark);
-  margin: 0;
-}
-
-.cardDescription {
-  flex: 1;
-  color: var(--color-text-light);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  margin: 0;
+  margin: 0 0 var(--spacing-lg) 0;
 }
 
 .cardButton {
   display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-2xl);
+  background-color: #000000;
   color: var(--color-white);
   font-weight: 600;
+  font-size: var(--font-size-sm);
   text-decoration: none;
-  border-radius: var(--border-radius-md);
+  border-radius: 25px;
   text-align: center;
   transition: all var(--transition-base);
-  align-self: flex-start;
+  letter-spacing: 1px;
 }
 
 .cardButton:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateX(4px);
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+/* Секция "Почему выбирают нас" */
+.whyUsSection {
+  padding: var(--spacing-3xl) 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-white);
+}
+
+.sectionTitleWhite {
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+.whyUsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.whyUsItem {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.whyUsNumber {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  opacity: 0.9;
+}
+
+.whyUsText {
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Секция "О компании" */
