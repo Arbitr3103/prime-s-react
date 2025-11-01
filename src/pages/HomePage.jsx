@@ -234,31 +234,6 @@ function ProjectsCarousel() {
   const viewportRef = useRef(null);
   const items = [project1, project2, project3, project4, project5, project6];
 
-  // Автоскролл каждые 4 сек. Останавливается при hover/focus.
-  useEffect(() => {
-    const viewport = viewportRef.current;
-    if (!viewport) return;
-    let index = 0;
-    let hovered = false;
-
-    const onEnter = () => (hovered = true);
-    const onLeave = () => (hovered = false);
-    viewport.addEventListener("mouseenter", onEnter);
-    viewport.addEventListener("mouseleave", onLeave);
-
-    const id = setInterval(() => {
-      if (hovered) return;
-      index = (index + 1) % items.length;
-      const slide = viewport.querySelectorAll(`.${styles.slide}`)[index];
-      if (slide) slide.scrollIntoView({ behavior: "smooth", inline: "center" });
-    }, 4000);
-
-    return () => {
-      clearInterval(id);
-      viewport.removeEventListener("mouseenter", onEnter);
-      viewport.removeEventListener("mouseleave", onLeave);
-    };
-  }, []);
 
   const scrollBySlides = (dir) => {
     const viewport = viewportRef.current;
