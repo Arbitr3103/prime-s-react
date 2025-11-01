@@ -10,7 +10,8 @@
 
 /* Каталог имеет особый контейнер, почти на всю ширину */
 .catalogSection .container {
-  max-width: 1400px;
+  max-width: none;
+  width: 100%;
 }
 
 /* Hero секция */
@@ -239,7 +240,7 @@
   background-color: var(--color-white);
   text-align: center;
   transition: all var(--transition-base);
-  width: 300px;
+  width: clamp(300px, 28vw, 420px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,7 +252,7 @@
 
 .cardImage {
   width: 100%;
-  height: 250px;
+  height: clamp(250px, 22vw, 320px);
   background-color: transparent;
   margin-bottom: var(--spacing-md);
   display: flex;
