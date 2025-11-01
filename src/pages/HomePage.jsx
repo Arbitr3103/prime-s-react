@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import styles from "./HomePage.module.css";
 import profnastilImg from "../assets/images/products/vodostok.jpg"; // Профнастил - черный волнистый
 import sandwichImg from "../assets/images/products/snegozader.jpg"; // Сэндвич-панели - слоистая панель
@@ -33,56 +34,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Секция "Наши объекты" */}
-      <section className={styles.projectsSection}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>НАШИ ОБЪЕКТЫ</h2>
-          <div className={styles.projectsGrid}>
-            <div className={styles.projectCard}>
-              <img
-                src={project1}
-                alt="Объект 1"
-                className={styles.projectImage}
-              />
-            </div>
-            <div className={styles.projectCard}>
-              <img
-                src={project2}
-                alt="Объект 2"
-                className={styles.projectImage}
-              />
-            </div>
-            <div className={styles.projectCard}>
-              <img
-                src={project3}
-                alt="Объект 3"
-                className={styles.projectImage}
-              />
-            </div>
-            <div className={styles.projectCard}>
-              <img
-                src={project4}
-                alt="Объект 4"
-                className={styles.projectImage}
-              />
-            </div>
-            <div className={styles.projectCard}>
-              <img
-                src={project5}
-                alt="Объект 5"
-                className={styles.projectImage}
-              />
-            </div>
-            <div className={styles.projectCard}>
-              <img
-                src={project6}
-                alt="Объект 6"
-                className={styles.projectImage}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Секция "Наши объекты" с каруселью */}
+      <ProjectsCarousel />
 
       {/* Секция каталога */}
       <section id="catalog" className={styles.catalogSection}>
@@ -273,3 +226,77 @@ function HomePage() {
 }
 
 export default HomePage;
+
+/**
+ * Карусель объектов: крупные изображения, скролл-снэп, автоскролл
+ */
+function ProjectsCarousel() {
+  const viewportRef = useRef(null);
+  const items = [project1, project2, project3, project4, project5, project6];
+
+  // Автоскролл каждые 4 сек. Останавливается при hover/focus.
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    let index = 0;
+    let hovered = false;
+
+    const onEnter = () => (hovered = true);
+    const onLeave = () => (hovered = false);
+    viewport.addEventListener("mouseenter", onEnter);
+    viewport.addEventListener("mouseleave", onLeave);
+
+    const id = setInterval(() => {
+      if (hovered) return;
+      index = (index + 1) % items.length;
+      const slide = viewport.querySelectorAll(`.${styles.slide}`)[index];
+      if (slide) slide.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }, 4000);
+
+    return () => {
+      clearInterval(id);
+      viewport.removeEventListener("mouseenter", onEnter);
+      viewport.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
+  const scrollBySlides = (dir) => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    const width = viewport.clientWidth * 0.9;
+    viewport.scrollBy({ left: dir * width, behavior: "smooth" });
+  };
+
+  return (
+    <section className={styles.projectsCarouselSection}>
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>НАШИ ОБЪЕКТЫ</h2>
+      </div>
+      <div className={styles.carouselWrapper}>
+        <button
+          className={`${styles.arrow} ${styles.arrowLeft}`}
+          aria-label="Назад"
+          onClick={() => scrollBySlides(-1)}
+        >
+          ‹
+        </button>
+        <div ref={viewportRef} className={styles.carouselViewport}>
+          <div className={styles.carouselTrack}>
+            {items.map((src, i) => (
+              <div className={styles.slide} key={i}>
+                <img src={src} alt={`Объект ${i + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <button
+          className={`${styles.arrow} ${styles.arrowRight}`}
+          aria-label="Вперёд"
+          onClick={() => scrollBySlides(1)}
+        >
+          ›
+        </button>
+      </div>
+    </section>
+  );
+}
