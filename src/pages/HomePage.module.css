@@ -3,7 +3,7 @@
 }
 
 .container {
-  max-width: 1200px; /* Увеличенная ширина контейнера */
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
@@ -20,16 +20,18 @@
   background-position: center;
   background-repeat: no-repeat;
   color: var(--color-white);
-  padding: 120px 0;
-  text-align: left;
-  min-height: 600px;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .heroContent {
-  max-width: 700px;
-  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 .heroTitle {
@@ -388,7 +390,7 @@
 /* Адаптивность */
 @media (max-width: 768px) {
   .heroSection {
-    padding: var(--spacing-2xl) 0;
+    min-height: calc(100vh - 56px);
   }
 
   .catalogGrid {
