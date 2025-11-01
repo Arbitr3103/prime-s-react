@@ -334,18 +334,19 @@
 }
 
 .whyUsNumber {
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
   color: var(--color-white);
   margin-bottom: var(--spacing-md);
   opacity: 0.9;
 }
 
 .whyUsText {
-  font-size: var(--font-size-base);
+  font-size: clamp(1.0625rem, 1.8vw, 1.375rem);
   color: var(--color-white);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
+  font-weight: 600;
 }
 
 /* Секция "О компании" */
@@ -356,16 +357,17 @@
 }
 
 .aboutContent {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 
 .aboutText {
-  font-size: var(--font-size-lg);
-  line-height: 1.8;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.9;
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
+  font-weight: 600;
 }
 
 .aboutText:last-child {
@@ -400,18 +402,18 @@
 }
 
 .contactCardTitle {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
   margin-bottom: var(--spacing-md);
   color: var(--color-text-dark);
 }
 
 .contactCardLink {
   display: inline-block;
-  font-size: var(--font-size-lg);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
   color: var(--color-primary);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: var(--spacing-sm);
   transition: color var(--transition-fast);
 }
@@ -421,7 +423,7 @@
 }
 
 .contactCardText {
-  font-size: var(--font-size-sm);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--color-text-light);
   margin: 0;
 }
@@ -436,14 +438,14 @@
 }
 
 .workingHoursTitle {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700;
   margin-bottom: var(--spacing-md);
   color: var(--color-text-dark);
 }
 
 .workingHoursText {
-  font-size: var(--font-size-base);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--color-text-light);
   margin: var(--spacing-sm) 0;
 }
