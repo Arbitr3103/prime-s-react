@@ -52,10 +52,11 @@
 }
 
 .heroDescription {
-  font-size: var(--font-size-lg);
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  font-weight: 600;
   margin-bottom: 0;
   color: var(--color-white);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* Секция "Наши объекты" */
