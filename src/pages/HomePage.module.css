@@ -170,30 +170,34 @@
 .catalogSection {
   min-height: 100vh;
   padding: var(--spacing-xl) 0 var(--spacing-2xl);
-  background-color: var(--color-white);
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  color: var(--color-white);
 }
 
 .sectionTitle {
   text-align: center;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
-  margin-bottom: var(--spacing-2xl);
+  margin: 0 auto var(--spacing-2xl);
   color: var(--color-text-dark);
   letter-spacing: 2px;
   position: relative;
   padding-bottom: var(--spacing-md);
+  display: inline-block; /* чтобы подчеркивание шло по длине текста */
 }
 
 .sectionTitle::after {
   content: '';
   position: absolute;
+  left: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: var(--color-text-dark);
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
 }
 
 .catalogTopRow {
@@ -315,9 +319,10 @@
   text-align: center;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
-  margin-bottom: var(--spacing-3xl);
+  margin: 0 auto var(--spacing-3xl);
   color: var(--color-white);
   letter-spacing: 2px;
+  display: inline-block;
 }
 
 .whyUsGrid {
@@ -377,7 +382,10 @@
 /* Секция контактов */
 .contactSection {
   padding: var(--spacing-3xl) 0;
-  background-color: var(--color-white);
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
 }
 
 .contactGrid {
