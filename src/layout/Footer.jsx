@@ -1,5 +1,71 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import styles from './Footer.module.css';
+
+/**
+ * Компонент Яндекс карты
+ */
+function YandexMap() {
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    // Динамическая загрузка Яндекс карт API
+    if (!window.ymaps) {
+      const script = document.createElement('script');
+      script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+      script.async = true;
+      script.onload = () => {
+        window.ymaps.ready(() => {
+          if (mapRef.current) {
+            const map = new window.ymaps.Map(mapRef.current, {
+              center: [55.713872, 52.406429], // г. Набережные Челны, ул. Машиностроительная 39/4
+              zoom: 16,
+              controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
+            });
+
+            // Добавляем маркер
+            const placemark = new window.ymaps.Placemark(
+              [55.713872, 52.406429],
+              {
+                balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная 39/4, 2 этаж, офис 7, офис 8'
+              },
+              {
+                preset: 'islands#blueDotIcon'
+              }
+            );
+
+            map.geoObjects.add(placemark);
+          }
+        });
+      };
+      document.head.appendChild(script);
+    } else {
+      window.ymaps.ready(() => {
+        if (mapRef.current) {
+          const map = new window.ymaps.Map(mapRef.current, {
+            center: [55.713872, 52.406429],
+            zoom: 16,
+            controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
+          });
+
+          const placemark = new window.ymaps.Placemark(
+            [55.713872, 52.406429],
+            {
+              balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная 39/4, 2 этаж, офис 7, офис 8'
+            },
+            {
+              preset: 'islands#blueDotIcon'
+            }
+          );
+
+          map.geoObjects.add(placemark);
+        }
+      });
+    }
+  }, []);
+
+  return <div ref={mapRef} className={styles.mapContainer} />;
+}
 
 /**
  * Компонент подвала сайта
@@ -32,6 +98,11 @@ function Footer() {
               <Link to="/about" className={styles.footerLink}>О компании</Link>
             </nav>
           </div>
+        </div>
+
+        {/* Яндекс карта */}
+        <div className={styles.mapSection}>
+          <YandexMap />
         </div>
 
         {/* Копирайт */}
