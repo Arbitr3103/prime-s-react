@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import styles from './ProductPage.module.css';
 import profnastilImg from '../assets/images/products/profnastil.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
+import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import fasonnieImg from '../assets/images/products/fasonnie.jpg';
 import snegozaderImg from '../assets/images/products/snegozader.jpg';
 import vodostokImg from '../assets/images/products/vodostok.png';
@@ -104,7 +105,7 @@ const productsData = {
       {
         id: '979361485062-sendvich-panel-stenovaya-bazalt',
         title: 'Сэндвич панель стеновая базальт',
-        image: sandwichImg,
+        image: sandwichStenovayaBazaltImg,
         hasDrawing: false
       },
       {

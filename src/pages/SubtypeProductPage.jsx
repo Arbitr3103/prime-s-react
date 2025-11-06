@@ -1,6 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
 import styles from './SubtypeProductPage.module.css';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
+import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
+import sandwichStenovayaBazaltDrawing1 from '../assets/images/products/sandwich-stenovaya-bazalt-drawing1.jpg';
+import sandwichStenovayaBazaltDrawing2 from '../assets/images/products/sandwich-stenovaya-bazalt-drawing2.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -137,8 +140,12 @@ const subtypesData = {
   sandwpan: {
     '979361485062-sendvich-panel-stenovaya-bazalt': {
       title: 'Сэндвич панель стеновая базальт',
-      image: sandwichImg,
-      hasDrawing: false,
+      image: sandwichStenovayaBazaltImg,
+      hasDrawing: true,
+      drawings: [
+        sandwichStenovayaBazaltDrawing1,
+        sandwichStenovayaBazaltDrawing2
+      ],
       description: 'Стеновая сэндвич-панель с утеплителем из базальтовой ваты. Отличная теплоизоляция и звукоизоляция.'
     },
     'sendvich-panel-krovelnaya-bazalt': {
@@ -202,14 +209,28 @@ function SubtypeProductPage() {
               </div>
             </div>
 
-            {/* Чертеж (если есть) */}
-            {subtype.hasDrawing && subtype.drawingDimensions && (
+            {/* Чертежи (если есть) */}
+            {subtype.hasDrawing && (
               <div className={styles.drawingSection}>
-                <h2 className={styles.sectionTitle}>Технический чертеж</h2>
-                <RoofPanelDrawing 
-                  height={subtype.drawingDimensions.height}
-                  width={subtype.drawingDimensions.width}
-                />
+                <h2 className={styles.sectionTitle}>Технические чертежи</h2>
+                {subtype.drawings && subtype.drawings.length > 0 ? (
+                  <div className={styles.drawingsGrid}>
+                    {subtype.drawings.map((drawing, index) => (
+                      <div key={index} className={styles.drawingImageContainer}>
+                        <img 
+                          src={drawing} 
+                          alt={`Чертеж ${index + 1}`}
+                          className={styles.drawingImage}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : subtype.drawingDimensions && (
+                  <RoofPanelDrawing 
+                    height={subtype.drawingDimensions.height}
+                    width={subtype.drawingDimensions.width}
+                  />
+                )}
               </div>
             )}
 
