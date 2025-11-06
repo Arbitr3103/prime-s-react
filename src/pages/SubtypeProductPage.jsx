@@ -14,6 +14,8 @@ import sandwichStenovayaPirDrawing3 from '../assets/images/products/sandwich-ste
 import sandwichKrovelnayaPirImg from '../assets/images/products/sandwich-krovelnaya-pir.jpg';
 import profnastilC8Img from '../assets/images/products/profnastil-c8.jpg';
 import profnastilC21Img from '../assets/images/products/profnastil-c21.jpg';
+import profnastilHC35Img from '../assets/images/products/profnastil-hc35.jpg';
+import profnastilHC44Img from '../assets/images/products/profnastil-hc44.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -197,6 +199,18 @@ const subtypesData = {
       image: profnastilC21Img,
       hasDrawing: false,
       description: 'Профнастил C21 с полезной шириной 1051 мм и общей шириной 1000 мм. Отлично подходит для кровельных работ.'
+    },
+    'profnastil-hc35-1060-1000': {
+      title: 'Профнастил HC35 1060/1000',
+      image: profnastilHC35Img,
+      hasDrawing: false,
+      description: 'Профнастил HC35 с полезной шириной 1060 мм и общей шириной 1000 мм. Высокий профиль для кровельных работ.'
+    },
+    'profnastil-hc44-1064-1000': {
+      title: 'Профнастил HC44 1064/1000',
+      image: profnastilHC44Img,
+      hasDrawing: false,
+      description: 'Профнастил HC44 с полезной шириной 1064 мм и общей шириной 1000 мм. Максимальная прочность для кровельных конструкций.'
     }
   }
 };

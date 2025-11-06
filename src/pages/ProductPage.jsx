@@ -3,6 +3,8 @@ import styles from './ProductPage.module.css';
 import profnastilImg from '../assets/images/products/profnastil.jpg';
 import profnastilC8Img from '../assets/images/products/profnastil-c8.jpg';
 import profnastilC21Img from '../assets/images/products/profnastil-c21.jpg';
+import profnastilHC35Img from '../assets/images/products/profnastil-hc35.jpg';
+import profnastilHC44Img from '../assets/images/products/profnastil-hc44.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
@@ -99,6 +101,18 @@ const productsData = {
         id: 'profnastil-c21-1051-1000',
         title: 'Профнастил C21 1051/1000',
         image: profnastilC21Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-hc35-1060-1000',
+        title: 'Профнастил HC35 1060/1000',
+        image: profnastilHC35Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-hc44-1064-1000',
+        title: 'Профнастил HC44 1064/1000',
+        image: profnastilHC44Img,
         hasDrawing: false
       }
     ]
