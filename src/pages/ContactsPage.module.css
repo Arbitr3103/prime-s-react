@@ -61,6 +61,15 @@
 .cardIcon {
   font-size: 3rem;
   margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.cardIcon svg {
+  width: 48px;
+  height: 48px;
 }
 
 .cardTitle {
