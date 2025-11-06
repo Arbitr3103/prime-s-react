@@ -195,6 +195,9 @@ function SubtypeProductPage() {
   
   // Состояние для отслеживания текущего отображаемого изображения
   const [currentImage, setCurrentImage] = useState(subtype?.image || null);
+  // Состояние для модального окна увеличенного изображения
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
 
   if (!subtype) {
     return (
@@ -209,14 +212,47 @@ function SubtypeProductPage() {
     );
   }
 
-  // Обработчик клика на чертеж
-  const handleDrawingClick = (drawing) => {
+  // Обработчик клика на контейнер чертежа - заменяет основное фото
+  const handleDrawingContainerClick = (drawing) => {
     setCurrentImage(drawing);
+  };
+
+  // Обработчик клика на чертеж для увеличения в модальном окне
+  const handleDrawingZoom = (drawing, e) => {
+    e.stopPropagation();
+    setModalImage(drawing);
+    setIsModalOpen(true);
   };
 
   // Обработчик клика на основное фото для возврата к исходному
   const handleMainImageClick = () => {
-    setCurrentImage(subtype.image);
+    if (currentImage !== subtype.image) {
+      setCurrentImage(subtype.image);
+    } else {
+      // Если это исходное фото, открываем модальное окно
+      setModalImage(currentImage);
+      setIsModalOpen(true);
+    }
+  };
+
+  // Обработчик клика на фото для увеличения
+  const handleImageZoom = (e) => {
+    e.stopPropagation(); // Предотвращаем всплытие события
+    setModalImage(currentImage);
+    setIsModalOpen(true);
+  };
+
+  // Закрытие модального окна
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setModalImage(null);
+  };
+
+  // Закрытие модального окна по клику на фон
+  const handleModalBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
   };
 
   return (
@@ -239,9 +275,9 @@ function SubtypeProductPage() {
                 <img 
                   src={currentImage} 
                   alt={currentImage === subtype.image ? subtype.title : 'Технический чертеж'}
-                  onClick={handleMainImageClick}
-                  className={currentImage !== subtype.image ? styles.clickableImage : ''}
-                  title={currentImage !== subtype.image ? 'Нажмите, чтобы вернуться к фото продукта' : ''}
+                  onClick={currentImage !== subtype.image ? handleMainImageClick : handleImageZoom}
+                  className={styles.zoomableImage}
+                  title={currentImage !== subtype.image ? 'Нажмите, чтобы вернуться к фото продукта' : 'Нажмите, чтобы увеличить'}
                 />
                 {currentImage !== subtype.image && (
                   <div className={styles.imageHint}>
@@ -262,15 +298,16 @@ function SubtypeProductPage() {
                       <div 
                         key={index} 
                         className={styles.drawingImageContainer}
-                        onClick={() => handleDrawingClick(drawing)}
+                        onClick={() => handleDrawingContainerClick(drawing)}
                       >
                         <img 
                           src={drawing} 
                           alt={`Чертеж ${index + 1}`}
                           className={styles.drawingImage}
+                          onClick={(e) => handleDrawingZoom(drawing, e)}
                         />
                         <div className={styles.drawingOverlay}>
-                          <span className={styles.drawingOverlayText}>Нажмите для увеличения</span>
+                          <span className={styles.drawingOverlayText}>Нажмите на чертеж для увеличения</span>
                         </div>
                       </div>
                     ))}
@@ -301,6 +338,29 @@ function SubtypeProductPage() {
           </div>
         </div>
       </section>
+
+      {/* Модальное окно для увеличенного изображения */}
+      {isModalOpen && modalImage && (
+        <div 
+          className={styles.modalOverlay}
+          onClick={handleModalBackdropClick}
+        >
+          <div className={styles.modalContent}>
+            <button 
+              className={styles.modalCloseButton}
+              onClick={handleCloseModal}
+              aria-label="Закрыть"
+            >
+              ×
+            </button>
+            <img 
+              src={modalImage} 
+              alt="Увеличенное изображение"
+              className={styles.modalImage}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
