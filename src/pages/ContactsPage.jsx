@@ -89,8 +89,12 @@ function ContactsPage() {
               <div className={styles.cardIcon}>📧</div>
               <h2 className={styles.cardTitle}>Email</h2>
               <a 
-                href="mailto:info@prime-s.ru"
+                href="mailto:info@prime-s.ru?subject=Вопрос%20от%20клиента&body=Здравствуйте!"
                 className={styles.contactLink}
+                onClick={(e) => {
+                  // Убеждаемся, что ссылка работает
+                  window.location.href = 'mailto:info@prime-s.ru?subject=Вопрос%20от%20клиента&body=Здравствуйте!';
+                }}
               >
                 info@prime-s.ru
               </a>
