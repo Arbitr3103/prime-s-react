@@ -414,6 +414,25 @@
   color: var(--color-white);
 }
 
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contactColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
 .contactHeading {
   text-align: center;
   font-size: clamp(2rem, 3.5vw, 3rem);

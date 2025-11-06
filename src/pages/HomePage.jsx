@@ -169,28 +169,38 @@ function HomePage() {
         <div className={styles.container}>
           <h2 className={styles.contactHeading}>Наши контакты</h2>
           <div className={styles.contactContent}>
-            <p className={styles.contactText}>Офис :</p>
-            <p className={styles.contactText}>
-              г. Набережные Челны, ул. Машиностроительная 39/4,
-              <br />2 этаж, офис 7, офис 8
-            </p>
+            <div className={styles.contactGrid}>
+              <div className={styles.contactColumn}>
+                <p className={styles.contactText}>Офис :</p>
+                <p className={styles.contactText}>
+                  г. Набережные Челны, ул. Машиностроительная 39/4,
+                  <br />2 этаж, офис 7, офис 8
+                </p>
 
-            <p className={styles.contactText}>Отдел продаж :</p>
-            <p className={styles.contactText}>Тел : +7(986) - 826- 7777</p>
-            <p className={styles.contactText}>Тел : +7(986) - 822- 7777</p>
-            <p className={styles.contactText}>E-mail : info@prime-s.ru</p>
+                <p className={styles.contactText}>Отдел продаж :</p>
+                <p className={styles.contactText}>Тел : +7(986) - 826- 7777</p>
+                <p className={styles.contactText}>Тел : +7(986) - 822- 7777</p>
+                <a href="mailto:info@prime-s.ru" className={styles.contactText} style={{ textDecoration: 'underline' }}>
+                  E-mail : info@prime-s.ru
+                </a>
 
-            <p className={styles.contactText}>Отдел бухгалтерии :</p>
-            <p className={styles.contactText}>E-mail : buh@prime-s.ru</p>
+                <p className={styles.contactText}>Отдел бухгалтерии :</p>
+                <a href="mailto:buh@prime-s.ru" className={styles.contactText} style={{ textDecoration: 'underline' }}>
+                  E-mail : buh@prime-s.ru
+                </a>
 
-            <p className={styles.contactText}>ИНН 1650441170</p>
+                <p className={styles.contactText}>ИНН 1650441170</p>
+              </div>
 
-            <p className={styles.contactText} style={{ marginTop: '24px', fontWeight: 'bold' }}>Режим работы :</p>
-            <p className={styles.contactText}>Пн - Пт : 8:00 - 17:00</p>
-            <p className={styles.contactText}>Сб : 8:00 - 14:00</p>
-            <p className={styles.contactText}>Перерыв с 12:00 - 12:30</p>
+              <div className={styles.contactColumn}>
+                <p className={styles.contactText} style={{ fontWeight: 'bold' }}>Режим работы :</p>
+                <p className={styles.contactText}>Пн - Пт : 8:00 - 17:00</p>
+                <p className={styles.contactText}>Сб : 8:00 - 14:00</p>
+                <p className={styles.contactText}>Перерыв с 12:00 - 12:30</p>
+              </div>
+            </div>
 
-            <div style={{ marginTop: '24px' }}>
+            <div style={{ marginTop: '24px', textAlign: 'center' }}>
               <a
                 className={styles.messengerLink}
                 href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
