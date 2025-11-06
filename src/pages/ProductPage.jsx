@@ -7,6 +7,10 @@ import profnastilHC35Img from '../assets/images/products/profnastil-hc35.jpg';
 import profnastilHC44Img from '../assets/images/products/profnastil-hc44.jpg';
 import profnastilH57Img from '../assets/images/products/profnastil-h57.jpg';
 import profnastilH60Img from '../assets/images/products/profnastil-h60.jpg';
+import profnastilH75Img from '../assets/images/products/profnastil-h75.jpg';
+import profnastilH114_646Img from '../assets/images/products/profnastil-h114-646.jpg';
+import profnastilH114_807Img from '../assets/images/products/profnastil-h114-807.jpg';
+import profnastilCKH153Img from '../assets/images/products/profnastil-ckh153.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
@@ -127,6 +131,30 @@ const productsData = {
         id: 'profnastil-h60-902-845',
         title: 'Профнастил H60 902/845',
         image: profnastilH60Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-h75-800-750',
+        title: 'Профнастил H75 800/750',
+        image: profnastilH75Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-h114-646-600',
+        title: 'Профнастил H114 646/600',
+        image: profnastilH114_646Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-h114-807-750',
+        title: 'Профнастил H114 807/750',
+        image: profnastilH114_807Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-ckh153-826-800',
+        title: 'Профнастил CKH153 826/800',
+        image: profnastilCKH153Img,
         hasDrawing: false
       }
     ]

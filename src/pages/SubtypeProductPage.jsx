@@ -18,6 +18,10 @@ import profnastilHC35Img from '../assets/images/products/profnastil-hc35.jpg';
 import profnastilHC44Img from '../assets/images/products/profnastil-hc44.jpg';
 import profnastilH57Img from '../assets/images/products/profnastil-h57.jpg';
 import profnastilH60Img from '../assets/images/products/profnastil-h60.jpg';
+import profnastilH75Img from '../assets/images/products/profnastil-h75.jpg';
+import profnastilH114_646Img from '../assets/images/products/profnastil-h114-646.jpg';
+import profnastilH114_807Img from '../assets/images/products/profnastil-h114-807.jpg';
+import profnastilCKH153Img from '../assets/images/products/profnastil-ckh153.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -225,6 +229,30 @@ const subtypesData = {
       image: profnastilH60Img,
       hasDrawing: false,
       description: 'Профнастил H60 с полезной шириной 902 мм и общей шириной 845 мм. Максимальная прочность для кровельных конструкций.'
+    },
+    'profnastil-h75-800-750': {
+      title: 'Профнастил H75 800/750',
+      image: profnastilH75Img,
+      hasDrawing: false,
+      description: 'Профнастил H75 с полезной шириной 800 мм и общей шириной 750 мм. Высокий профиль для кровельных работ.'
+    },
+    'profnastil-h114-646-600': {
+      title: 'Профнастил H114 646/600',
+      image: profnastilH114_646Img,
+      hasDrawing: false,
+      description: 'Профнастил H114 с полезной шириной 646 мм и общей шириной 600 мм. Максимальная прочность для кровельных конструкций.'
+    },
+    'profnastil-h114-807-750': {
+      title: 'Профнастил H114 807/750',
+      image: profnastilH114_807Img,
+      hasDrawing: false,
+      description: 'Профнастил H114 с полезной шириной 807 мм и общей шириной 750 мм. Максимальная прочность для кровельных конструкций.'
+    },
+    'profnastil-ckh153-826-800': {
+      title: 'Профнастил CKH153 826/800',
+      image: profnastilCKH153Img,
+      hasDrawing: false,
+      description: 'Профнастил CKH153 с полезной шириной 826 мм и общей шириной 800 мм. Специальный профиль для кровельных работ.'
     }
   }
 };
