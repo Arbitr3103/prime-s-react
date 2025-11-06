@@ -93,6 +93,17 @@
   color: var(--color-primary-dark);
 }
 
+.phoneNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.phoneNumbers .contactLink {
+  margin-bottom: 0;
+}
+
 .cardDescription {
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
