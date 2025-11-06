@@ -180,14 +180,10 @@ function HomePage() {
                 <p className={styles.contactText}>Отдел продаж :</p>
                 <p className={styles.contactText}>Тел : +7(986) - 826- 7777</p>
                 <p className={styles.contactText}>Тел : +7(986) - 822- 7777</p>
-                <a href="mailto:info@prime-s.ru" className={styles.contactText} style={{ textDecoration: 'underline' }}>
-                  E-mail : info@prime-s.ru
-                </a>
+                <p className={styles.contactText}>E-mail : info@prime-s.ru</p>
 
                 <p className={styles.contactText}>Отдел бухгалтерии :</p>
-                <a href="mailto:buh@prime-s.ru" className={styles.contactText} style={{ textDecoration: 'underline' }}>
-                  E-mail : buh@prime-s.ru
-                </a>
+                <p className={styles.contactText}>E-mail : buh@prime-s.ru</p>
 
                 <p className={styles.contactText}>ИНН 1650441170</p>
               </div>

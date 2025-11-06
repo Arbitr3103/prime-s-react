@@ -88,12 +88,9 @@ function ContactsPage() {
             <div className={styles.contactCard}>
               <div className={styles.cardIcon}>📧</div>
               <h2 className={styles.cardTitle}>Email</h2>
-              <a 
-                href="mailto:info@prime-s.ru"
-                className={styles.contactLink}
-              >
+              <p className={styles.contactLink} style={{ textDecoration: 'none', cursor: 'default' }}>
                 info@prime-s.ru
-              </a>
+              </p>
               <p className={styles.cardDescription}>
                 Отправьте нам письмо с вашим вопросом
               </p>
