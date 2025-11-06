@@ -9,9 +9,9 @@ import sandwichStenovayaBazaltDrawing2 from '../assets/images/products/sandwich-
  * Компонент для отображения технического чертежа кровельной панели
  */
 function RoofPanelDrawing({ height, width }) {
-  const scale = 0.25; // Масштаб для отображения
+  const scale = 0.4; // Масштаб для отображения (увеличен для лучшей читаемости)
   const svgWidth = width * scale;
-  const svgHeight = 200; // Высота SVG контейнера
+  const svgHeight = 300; // Высота SVG контейнера (увеличена)
   const centerY = svgHeight / 2;
   
   // Профиль кровельной панели (гофрированный) - трапециевидный профиль
@@ -52,8 +52,8 @@ function RoofPanelDrawing({ height, width }) {
             <line x1="8" y1="0" x2="0" y2="8" stroke="#999" strokeWidth="0.5"/>
           </pattern>
           {/* Стрелки для размерных линий */}
-          <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+          <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="11" refY="3.5" orient="auto">
+            <polygon points="0 0, 12 3.5, 0 7" fill="#e74c3c" />
           </marker>
         </defs>
         
@@ -62,7 +62,7 @@ function RoofPanelDrawing({ height, width }) {
           points={allPoints}
           fill="url(#insulation)"
           stroke="#2c3e50"
-          strokeWidth="2"
+          strokeWidth="2.5"
         />
         
         {/* Внутренние линии профиля для детализации */}
@@ -86,20 +86,20 @@ function RoofPanelDrawing({ height, width }) {
         <g className={styles.dimensions}>
           {/* Высота волны (вертикальная размерная линия) */}
           <line
-            x1={waveWidth * scale / 2 + 15}
+            x1={waveWidth * scale / 2 + 20}
             y1={centerY - waveHeight * scale}
-            x2={waveWidth * scale / 2 + 15}
+            x2={waveWidth * scale / 2 + 20}
             y2={centerY}
             stroke="#e74c3c"
-            strokeWidth="2"
+            strokeWidth="2.5"
             markerEnd="url(#arrowhead)"
             markerStart="url(#arrowhead)"
           />
           <text
-            x={waveWidth * scale / 2 + 20}
+            x={waveWidth * scale / 2 + 25}
             y={centerY - waveHeight * scale / 2}
             fill="#e74c3c"
-            fontSize="14"
+            fontSize="18"
             fontWeight="700"
             dominantBaseline="middle"
           >
@@ -109,19 +109,19 @@ function RoofPanelDrawing({ height, width }) {
           {/* Ширина панели (горизонтальная размерная линия) */}
           <line
             x1="0"
-            y1={svgHeight - 30}
+            y1={svgHeight - 40}
             x2={svgWidth}
-            y2={svgHeight - 30}
+            y2={svgHeight - 40}
             stroke="#e74c3c"
-            strokeWidth="2"
+            strokeWidth="2.5"
             markerEnd="url(#arrowhead)"
             markerStart="url(#arrowhead)"
           />
           <text
             x={svgWidth / 2}
-            y={svgHeight - 10}
+            y={svgHeight - 15}
             fill="#e74c3c"
-            fontSize="14"
+            fontSize="18"
             fontWeight="700"
             textAnchor="middle"
           >

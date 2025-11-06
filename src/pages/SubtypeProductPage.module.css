@@ -89,11 +89,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-2xl);
   background-color: var(--color-white);
   border-radius: var(--border-radius-md);
   overflow-x: auto;
-  min-height: 250px;
+  min-height: 400px;
 }
 
 .drawing {
@@ -108,7 +108,7 @@
 
 .drawingsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
 }
@@ -116,18 +116,23 @@
 .drawingImageContainer {
   background-color: var(--color-white);
   border-radius: var(--border-radius-md);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 400px;
 }
 
 .drawingImage {
   width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 350px;
   border-radius: var(--border-radius-sm);
   object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .descriptionSection {
@@ -200,6 +205,15 @@
   .drawingsGrid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+  }
+
+  .drawingImageContainer {
+    min-height: 300px;
+    padding: var(--spacing-md);
+  }
+
+  .drawingImage {
+    min-height: 250px;
   }
 
   .buyButton {
