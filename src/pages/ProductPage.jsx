@@ -370,7 +370,13 @@ function ProductPage() {
                   Свяжитесь с нами для получения подробной информации и расчета стоимости
                 </p>
                 <button 
-                  onClick={() => navigate('/contacts')} 
+                  onClick={() => {
+                    navigate('/contacts');
+                    // Прокручиваем страницу вверх после небольшой задержки для завершения навигации
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 100);
+                  }} 
                   className={styles.contactButton}
                 >
                   Связаться с нами

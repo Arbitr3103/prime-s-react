@@ -1,9 +1,15 @@
+import { useEffect } from 'react';
 import styles from './ContactsPage.module.css';
 
 /**
  * Страница контактов
  */
 function ContactsPage() {
+  useEffect(() => {
+    // Прокручиваем страницу вверх при монтировании компонента
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={styles.contactsPage}>
       <section className={styles.headerSection}>
