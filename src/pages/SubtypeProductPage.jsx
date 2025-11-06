@@ -11,6 +11,7 @@ import sandwichStenovayaPirImg from '../assets/images/products/sandwich-stenovay
 import sandwichStenovayaPirDrawing1 from '../assets/images/products/sandwich-stenovaya-pir-drawing1.jpg';
 import sandwichStenovayaPirDrawing2 from '../assets/images/products/sandwich-stenovaya-pir-drawing2.jpg';
 import sandwichStenovayaPirDrawing3 from '../assets/images/products/sandwich-stenovaya-pir-drawing3.jpg';
+import sandwichKrovelnayaPirImg from '../assets/images/products/sandwich-krovelnaya-pir.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -174,6 +175,12 @@ const subtypesData = {
         sandwichStenovayaPirDrawing3
       ],
       description: 'Стеновая сэндвич-панель с утеплителем PIR. Высокая энергоэффективность и долговечность.'
+    },
+    'sendvich-panel-krovelnaya-pir': {
+      title: 'Сэндвич панель кровельная PIR',
+      image: sandwichKrovelnayaPirImg,
+      hasDrawing: false,
+      description: 'Кровельная сэндвич-панель с утеплителем PIR. Высокая энергоэффективность и отличные теплоизоляционные свойства.'
     }
   }
 };
