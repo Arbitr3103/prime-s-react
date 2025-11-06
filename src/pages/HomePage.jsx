@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import styles from "./HomePage.module.css";
-import profnastilImg from "../assets/images/products/vodostok.jpg"; // Профнастил - черный волнистый
-import sandwichImg from "../assets/images/products/snegozader.jpg"; // Сэндвич-панели - слоистая панель
-import fasonnieImg from "../assets/images/products/profnastil.jpg"; // Фасонные элементы - угловой элемент
-import snegozaderImg from "../assets/images/products/fasonnie.jpg"; // Снегозадержатель - трубки
-import vodostokImg from "../assets/images/products/sandwich.png"; // Водосточная система
+import profnastilImg from "../assets/images/products/profnastil.jpg"; // Профнастил - черный волнистый
+import sandwichImg from "../assets/images/products/sandwich.png"; // Сэндвич-панели - слоистая панель
+import fasonnieImg from "../assets/images/products/fasonnie.jpg"; // Фасонные элементы - угловой элемент
+import snegozaderImg from "../assets/images/products/snegozader.jpg"; // Снегозадержатель - трубки
+import vodostokImg from "../assets/images/products/vodostok.jpg"; // Водосточная система
 import project1 from "../assets/images/projects/project1.jpg";
 import project2 from "../assets/images/projects/project2.jpg";
 import project3 from "../assets/images/projects/project3.jpg";
