@@ -32,41 +32,6 @@ function Footer() {
               <Link to="/about" className={styles.footerLink}>О компании</Link>
             </nav>
           </div>
-
-          {/* Контакты */}
-          <div className={styles.footerSection}>
-            <h3 className={styles.sectionTitle}>Контакты</h3>
-            <div className={styles.contacts}>
-              <a href="tel:+79872647000" className={styles.contactLink}>
-                +7 (987) 264-70-00
-              </a>
-            </div>
-          </div>
-
-          {/* Социальные сети */}
-          <div className={styles.footerSection}>
-            <h3 className={styles.sectionTitle}>Мы в соцсетях</h3>
-            <div className={styles.socialLinks}>
-              <a 
-                href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0" 
-                className={styles.socialLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                WhatsApp
-              </a>
-              <a 
-                href="https://t.me/z1ganshin" 
-                className={styles.socialLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-              >
-                Telegram
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Копирайт */}
