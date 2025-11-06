@@ -18,12 +18,24 @@ function ContactsPage() {
       <section className={styles.contactsSection}>
         <div className={styles.container}>
           <div className={styles.contactsGrid}>
-            {/* Телефон */}
+            {/* Телефон 1 */}
             <div className={styles.contactCard}>
               <div className={styles.cardIcon}>📞</div>
               <h2 className={styles.cardTitle}>Телефон</h2>
-              <a href="tel:+79872647000" className={styles.contactLink}>
-                +7 (987) 264-70-00
+              <a href="tel:+79868267777" className={styles.contactLink}>
+                +7 (986) 826-77-77
+              </a>
+              <p className={styles.cardDescription}>
+                Звоните в рабочее время с 9:00 до 18:00
+              </p>
+            </div>
+
+            {/* Телефон 2 */}
+            <div className={styles.contactCard}>
+              <div className={styles.cardIcon}>📞</div>
+              <h2 className={styles.cardTitle}>Телефон</h2>
+              <a href="tel:+79868227777" className={styles.contactLink}>
+                +7 (986) 822-77-77
               </a>
               <p className={styles.cardDescription}>
                 Звоните в рабочее время с 9:00 до 18:00
@@ -35,7 +47,7 @@ function ContactsPage() {
               <div className={styles.cardIcon}>💬</div>
               <h2 className={styles.cardTitle}>WhatsApp</h2>
               <a 
-                href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=79868267777&text&type=phone_number&app_absent=0"
                 className={styles.contactLink}
                 target="_blank"
                 rel="noopener noreferrer"
