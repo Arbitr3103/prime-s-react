@@ -185,6 +185,11 @@ function HomePage() {
 
             <p className={styles.contactText}>ИНН 1650441170</p>
 
+            <p className={styles.contactText} style={{ marginTop: '24px', fontWeight: 'bold' }}>Режим работы :</p>
+            <p className={styles.contactText}>Пн - Пт : 8:00 - 17:00</p>
+            <p className={styles.contactText}>Сб : 8:00 - 14:00</p>
+            <p className={styles.contactText}>Перерыв с 12:00 - 12:30</p>
+
             <div style={{ marginTop: '24px' }}>
               <a
                 className={styles.messengerLink}

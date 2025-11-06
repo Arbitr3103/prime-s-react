@@ -89,12 +89,8 @@ function ContactsPage() {
               <div className={styles.cardIcon}>📧</div>
               <h2 className={styles.cardTitle}>Email</h2>
               <a 
-                href="mailto:info@prime-s.ru?subject=Вопрос%20от%20клиента&body=Здравствуйте!"
+                href="mailto:info@prime-s.ru"
                 className={styles.contactLink}
-                onClick={(e) => {
-                  // Убеждаемся, что ссылка работает
-                  window.location.href = 'mailto:info@prime-s.ru?subject=Вопрос%20от%20клиента&body=Здравствуйте!';
-                }}
               >
                 info@prime-s.ru
               </a>
@@ -109,10 +105,13 @@ function ContactsPage() {
             <h2 className={styles.infoTitle}>Режим работы</h2>
             <div className={styles.infoContent}>
               <p className={styles.infoText}>
-                <strong>Понедельник - Пятница:</strong> 9:00 - 18:00
+                <strong>Пн - Пт:</strong> 8:00 - 17:00
               </p>
               <p className={styles.infoText}>
-                <strong>Суббота - Воскресенье:</strong> Выходной
+                <strong>Сб:</strong> 8:00 - 14:00
+              </p>
+              <p className={styles.infoText}>
+                <strong>Перерыв:</strong> с 12:00 - 12:30
               </p>
             </div>
           </div>
