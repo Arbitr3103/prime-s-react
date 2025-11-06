@@ -42,19 +42,8 @@ function HomePage() {
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>КАТАЛОГ ПРОДУКЦИИ</h2>
           
-          {/* Верхний ряд: 3 товара */}
+          {/* Верхний ряд: 3 товара (как на оригинале): Сэндвич панели, Водосточная система, Снегозадержатель */}
           <div className={styles.catalogTopRow}>
-            {/* Профнастил */}
-            <div className={styles.catalogCard}>
-              <div className={styles.cardImage}>
-                <img src={profnastilImg} alt="Профнастил" />
-              </div>
-              <h3 className={styles.cardTitle}>Профнастил</h3>
-              <a href="/catalog/profnastil" className={styles.cardButton}>
-                ПОДРОБНЕЕ
-              </a>
-            </div>
-
             {/* Сэндвич-панели */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
@@ -66,20 +55,17 @@ function HomePage() {
               </a>
             </div>
 
-            {/* Фасонные элементы */}
+            {/* Водосточная система */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                <img src={fasonnieImg} alt="Фасонные элементы" />
+                <img src={vodostokImg} alt="Водосточная система" />
               </div>
-              <h3 className={styles.cardTitle}>Фасонные элементы</h3>
-              <a href="/catalog/fasonelement" className={styles.cardButton}>
+              <h3 className={styles.cardTitle}>Водосточная система</h3>
+              <a href="/catalog/vodostsist" className={styles.cardButton}>
                 ПОДРОБНЕЕ
               </a>
             </div>
-          </div>
-          
-          {/* Нижний ряд: 2 товара */}
-          <div className={styles.catalogBottomRow}>
+
             {/* Снегозадержатель трубчатый */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
@@ -90,14 +76,28 @@ function HomePage() {
                 ПОДРОБНЕЕ
               </a>
             </div>
+          </div>
 
-            {/* Водосточная система */}
+          {/* Нижний ряд: 2 товара: Профнастил, Фасонные элементы */}
+          <div className={styles.catalogBottomRow}>
+            {/* Профнастил */}
             <div className={styles.catalogCard}>
               <div className={styles.cardImage}>
-                <img src={vodostokImg} alt="Водосточная система" />
+                <img src={profnastilImg} alt="Профнастил" />
               </div>
-              <h3 className={styles.cardTitle}>Водосточная система</h3>
-              <a href="/catalog/vodostsist" className={styles.cardButton}>
+              <h3 className={styles.cardTitle}>Профнастил</h3>
+              <a href="/catalog/profnastil" className={styles.cardButton}>
+                ПОДРОБНЕЕ
+              </a>
+            </div>
+
+            {/* Фасонные элементы */}
+            <div className={styles.catalogCard}>
+              <div className={styles.cardImage}>
+                <img src={fasonnieImg} alt="Фасонные элементы" />
+              </div>
+              <h3 className={styles.cardTitle}>Фасонные элементы</h3>
+              <a href="/catalog/fasonelement" className={styles.cardButton}>
                 ПОДРОБНЕЕ
               </a>
             </div>
