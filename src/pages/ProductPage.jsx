@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import styles from './ProductPage.module.css';
 import profnastilImg from '../assets/images/products/profnastil.jpg';
+import profnastilC8Img from '../assets/images/products/profnastil-c8.jpg';
+import profnastilC21Img from '../assets/images/products/profnastil-c21.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
@@ -85,6 +87,20 @@ const productsData = {
       'Облицовка фасадов',
       'Заборы и ограждения',
       'Внутренняя отделка'
+    ],
+    subtypes: [
+      {
+        id: 'profnastil-c8-1051-1000',
+        title: 'Профнастил C8 1051/1000',
+        image: profnastilC8Img,
+        hasDrawing: false
+      },
+      {
+        id: 'profnastil-c21-1051-1000',
+        title: 'Профнастил C21 1051/1000',
+        image: profnastilC21Img,
+        hasDrawing: false
+      }
     ]
   },
   sandwpan: {

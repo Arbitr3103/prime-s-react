@@ -12,6 +12,8 @@ import sandwichStenovayaPirDrawing1 from '../assets/images/products/sandwich-ste
 import sandwichStenovayaPirDrawing2 from '../assets/images/products/sandwich-stenovaya-pir-drawing2.jpg';
 import sandwichStenovayaPirDrawing3 from '../assets/images/products/sandwich-stenovaya-pir-drawing3.jpg';
 import sandwichKrovelnayaPirImg from '../assets/images/products/sandwich-krovelnaya-pir.jpg';
+import profnastilC8Img from '../assets/images/products/profnastil-c8.jpg';
+import profnastilC21Img from '../assets/images/products/profnastil-c21.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -181,6 +183,20 @@ const subtypesData = {
       image: sandwichKrovelnayaPirImg,
       hasDrawing: false,
       description: 'Кровельная сэндвич-панель с утеплителем PIR. Высокая энергоэффективность и отличные теплоизоляционные свойства.'
+    }
+  },
+  profnastil: {
+    'profnastil-c8-1051-1000': {
+      title: 'Профнастил C8 1051/1000',
+      image: profnastilC8Img,
+      hasDrawing: false,
+      description: 'Профнастил C8 с полезной шириной 1051 мм и общей шириной 1000 мм. Идеален для облицовки фасадов и заборов.'
+    },
+    'profnastil-c21-1051-1000': {
+      title: 'Профнастил C21 1051/1000',
+      image: profnastilC21Img,
+      hasDrawing: false,
+      description: 'Профнастил C21 с полезной шириной 1051 мм и общей шириной 1000 мм. Отлично подходит для кровельных работ.'
     }
   }
 };
