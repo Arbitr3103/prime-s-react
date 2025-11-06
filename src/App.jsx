@@ -3,6 +3,7 @@ import Layout from './layout/Layout';
 import HomePage from './pages/HomePage';
 import CatalogPage from './pages/CatalogPage';
 import ProductPage from './pages/ProductPage';
+import SubtypeProductPage from './pages/SubtypeProductPage';
 import ContactsPage from './pages/ContactsPage';
 import AboutPage from './pages/AboutPage';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:productId" element={<ProductPage />} />
+          <Route path="/catalog/:productId/tproduct/:subtypeId" element={<SubtypeProductPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

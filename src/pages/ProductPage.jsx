@@ -102,19 +102,26 @@ const productsData = {
     ],
     subtypes: [
       {
+        id: '979361485062-sendvich-panel-stenovaya-bazalt',
         title: 'Сэндвич панель стеновая базальт',
         image: sandwichImg,
-        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
+        hasDrawing: false
       },
       {
+        id: 'sendvich-panel-krovelnaya-bazalt',
         title: 'Сэндвич панель кровельная базальт',
         image: sandwichImg,
-        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
+        hasDrawing: true,
+        drawingDimensions: {
+          height: 41,
+          width: 1000
+        }
       },
       {
+        id: 'sendvich-panel-stenovaya-pir',
         title: 'Сэндвич панель стеновая PIR',
         image: sandwichImg,
-        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
+        hasDrawing: false
       }
     ],
     colorPalette: [
@@ -227,23 +234,16 @@ function ProductPage() {
               <h2 className={styles.sectionTitle}>Типы продукции</h2>
               <div className={styles.subtypesGrid}>
                 {product.subtypes.map((subtype, index) => (
-                  <div key={index} className={styles.subtypeCard}>
-                    <div className={styles.subtypeImageContainer}>
-                      <img 
-                        src={subtype.image} 
-                        alt={subtype.title}
-                        className={styles.subtypeImage}
-                      />
-                      {subtype.drawing && (
-                        <img 
-                          src={subtype.drawing} 
-                          alt={`${subtype.title} - чертеж`}
-                          className={styles.subtypeDrawing}
-                        />
-                      )}
+                  <Link 
+                    key={index} 
+                    to={`/catalog/${productId}/tproduct/${subtype.id}`}
+                    className={styles.subtypeCard}
+                  >
+                    <div className={styles.subtypeImage}>
+                      <img src={subtype.image} alt={subtype.title} />
                     </div>
                     <h3 className={styles.subtypeTitle}>{subtype.title}</h3>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
