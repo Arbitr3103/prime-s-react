@@ -13,6 +13,7 @@ import profnastilH114_807Img from '../assets/images/products/profnastil-h114-807
 import profnastilCKH153Img from '../assets/images/products/profnastil-ckh153.jpg';
 import profnastilH153Img from '../assets/images/products/profnastil-h153.jpg';
 import profnastilH158Img from '../assets/images/products/profnastil-h158.jpg';
+import colorPaletteProfnastilImg from '../assets/images/products/color-palette-profnastil.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
@@ -172,20 +173,7 @@ const productsData = {
         hasDrawing: false
       }
     ],
-    colorPalette: [
-      // Желтые/Оранжевые
-      1004, 1005, 1006, 1007, 1011, 1012, 1013, 1014, 1015, 1017, 1018, 1019, 1020, 1021, 1023, 1024, 1026, 1027, 1028, 1032, 1033, 1034, 1035, 1037,
-      // Красные
-      2000, 2001, 2002, 2003, 2004, 2008, 2009, 2010, 2011, 2012, 2013, 3000, 3001, 3002, 3003, 3004, 3005, 3007, 3009, 3011, 3012, 3013, 3014, 3015, 3016, 3017, 3018, 3020, 3022, 3024, 3026, 3027, 3028, 3031, 3032, 3033,
-      // Фиолетовые
-      4001, 4002, 4003, 4004, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 4012,
-      // Синие
-      5000, 5001, 5002, 5003, 5004, 5005, 5007, 5008, 5009, 5010, 5011, 5012, 5013, 5014, 5015, 5017, 5018, 5019, 5020, 5021, 5022, 5023, 5024, 5025, 5026,
-      // Зеленые
-      6000, 6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008, 6009, 6010, 6011, 6012, 6013, 6014, 6015, 6016, 6017, 6018, 6019, 6020, 6021, 6022, 6024, 6025, 6026, 6027, 6028, 6029, 6032, 6033, 6034, 6035, 6036, 6037, 6038,
-      // Серые
-      7000, 7001, 7002, 7003, 7004, 7005, 7006, 7008, 7009, 7010, 7011, 7012, 7013, 7015, 7016, 7021, 7022, 7023, 7024, 7026, 7030, 7031, 7032, 7033, 7034, 7035, 7036, 7037, 7038, 7039, 7040, 7042, 7043, 7044, 7045, 7046, 7047, 7048
-    ]
+    colorPaletteImage: colorPaletteProfnastilImg
   },
   sandwpan: {
     title: 'Сэндвич-панели',
@@ -405,7 +393,19 @@ function ProductPage() {
           </div>
 
           {/* Палитра цветов (если есть) */}
-          {product.colorPalette && product.colorPalette.length > 0 && (
+          {product.colorPaletteImage && (
+            <div className={styles.colorPaletteSection}>
+              <h2 className={styles.sectionTitle}>Палитра цветов RAL</h2>
+              <div className={styles.colorPaletteImageContainer}>
+                <img 
+                  src={product.colorPaletteImage} 
+                  alt="Палитра цветов RAL" 
+                  className={styles.colorPaletteImage}
+                />
+              </div>
+            </div>
+          )}
+          {product.colorPalette && product.colorPalette.length > 0 && !product.colorPaletteImage && (
             <div className={styles.colorPaletteSection}>
               <h2 className={styles.sectionTitle}>Палитра цветов RAL</h2>
               <div className={styles.colorPaletteGrid}>

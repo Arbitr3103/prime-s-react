@@ -244,6 +244,20 @@
   font-weight: 500;
 }
 
+.colorPaletteImageContainer {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorPaletteImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
 /* Адаптивность */
 @media (max-width: 1024px) {
   .productContent {
