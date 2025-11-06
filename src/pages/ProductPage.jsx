@@ -4,6 +4,7 @@ import profnastilImg from '../assets/images/products/profnastil.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
+import sandwichStenovayaPirImg from '../assets/images/products/sandwich-stenovaya-pir.jpg';
 import fasonnieImg from '../assets/images/products/fasonnie.jpg';
 import snegozaderImg from '../assets/images/products/snegozader.jpg';
 import vodostokImg from '../assets/images/products/vodostok.png';
@@ -122,7 +123,7 @@ const productsData = {
       {
         id: 'sendvich-panel-stenovaya-pir',
         title: 'Сэндвич панель стеновая PIR',
-        image: sandwichImg,
+        image: sandwichStenovayaPirImg,
         hasDrawing: false
       }
     ],

@@ -7,6 +7,12 @@ import sandwichStenovayaBazaltDrawing1 from '../assets/images/products/sandwich-
 import sandwichStenovayaBazaltDrawing2 from '../assets/images/products/sandwich-stenovaya-bazalt-drawing2.jpg';
 import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
 import sandwichKrovelnayaBazaltDrawing from '../assets/images/products/sandwich-krovelnaya-bazalt-drawing.jpg';
+import sandwichStenovayaPirImg from '../assets/images/products/sandwich-stenovaya-pir.jpg';
+import sandwichStenovayaPirDrawing1 from '../assets/images/products/sandwich-stenovaya-pir-drawing1.jpg';
+import sandwichStenovayaPirDrawing2 from '../assets/images/products/sandwich-stenovaya-pir-drawing2.jpg';
+import sandwichStenovayaPirDrawing3 from '../assets/images/products/sandwich-stenovaya-pir-drawing3.jpg';
+import sandwichStenovayaPirDrawing4 from '../assets/images/products/sandwich-stenovaya-pir-drawing4.jpg';
+import sandwichStenovayaPirDrawing5 from '../assets/images/products/sandwich-stenovaya-pir-drawing5.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -162,8 +168,15 @@ const subtypesData = {
     },
     'sendvich-panel-stenovaya-pir': {
       title: 'Сэндвич панель стеновая PIR',
-      image: sandwichImg,
-      hasDrawing: false,
+      image: sandwichStenovayaPirImg,
+      hasDrawing: true,
+      drawings: [
+        sandwichStenovayaPirDrawing1,
+        sandwichStenovayaPirDrawing2,
+        sandwichStenovayaPirDrawing3,
+        sandwichStenovayaPirDrawing4,
+        sandwichStenovayaPirDrawing5
+      ],
       description: 'Стеновая сэндвич-панель с утеплителем PIR. Высокая энергоэффективность и долговечность.'
     }
   }
