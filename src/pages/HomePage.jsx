@@ -41,7 +41,7 @@ function HomePage() {
       <section id="catalog" className={styles.catalogSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>КАТАЛОГ ПРОДУКЦИИ</h2>
-          
+
           {/* Верхний ряд: 3 товара (как на оригинале): Сэндвич панели, Водосточная система, Снегозадержатель */}
           <div className={styles.catalogTopRow}>
             {/* Сэндвич-панели */}
@@ -102,7 +102,6 @@ function HomePage() {
               </a>
             </div>
           </div>
-          
         </div>
       </section>
 
@@ -157,16 +156,9 @@ function HomePage() {
           <h2 className={styles.sectionTitle}>О компании</h2>
           <div className={styles.aboutContent}>
             <p className={styles.aboutText}>
-              PRIME-S — надёжный поставщик качественных строительных материалов.
-              Мы специализируемся на реализации сэндвич - панелей, профнастила,
-              доборных элементов. Изделия из металла за 1 день!
+              ООО ПраймСтрой – компания, работающая на рынке строительных материалов с опытом более 10 лет. За это время команда приобрела и приумножила опыт работы по поставке сэндвич - панелей, а также по профилированным листам работающих по Поволжье, другим регионам России. Логистика и отточенный менеджмент позволяют с успехом достигать намеченных целей, современное производство – решать поставленные задачи качественно и в срок. На сегодняшний день ООО ПраймСтрой обеспечена долгосрочными договорами на поставку продукции от завода производителей. География наших продаж ежегодно расширяется.
             </p>
-            <p className={styles.aboutText}>
-              Наша компания работает напрямую с производителями, что позволяет
-              нам предлагать конкурентные цены и гарантировать высокое качество
-              продукции. Мы обеспечиваем быструю доставку по региону собственным
-              транспортом.
-            </p>
+            <p className={styles.aboutText}>С Уважением, ООО ПраймСтрой</p>
           </div>
         </div>
       </section>
@@ -233,7 +225,6 @@ export default HomePage;
 function ProjectsCarousel() {
   const viewportRef = useRef(null);
   const items = [project1, project2, project3, project4, project5, project6];
-
 
   const scrollBySlides = (dir) => {
     const viewport = viewportRef.current;
