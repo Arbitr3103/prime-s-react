@@ -240,7 +240,16 @@ const productsData = {
       'Оформление углов',
       'Защита стыков',
       'Декоративные элементы'
-    ]
+    ],
+    subtypes: [
+      {
+        id: 'fasonelement-main',
+        title: 'Фасонные элементы',
+        image: fasonnieImg,
+        hasDrawing: false
+      }
+    ],
+    colorPaletteImage: colorPaletteProfnastilImg
   },
   snegozader: {
     title: 'Снегозадержатель трубчатый',
@@ -258,6 +267,14 @@ const productsData = {
       'Безопасность кровли',
       'Защита водосточных систем',
       'Предотвращение повреждений'
+    ],
+    subtypes: [
+      {
+        id: 'snegozader-main',
+        title: 'Снегозадержатель трубчатый',
+        image: snegozaderImg,
+        hasDrawing: false
+      }
     ]
   },
   vodostsist: {
@@ -276,7 +293,16 @@ const productsData = {
       'Защита фундамента',
       'Защита фасада',
       'Предотвращение затоплений'
-    ]
+    ],
+    subtypes: [
+      {
+        id: 'vodostsist-main',
+        title: 'Водосточная система',
+        image: vodostokImg,
+        hasDrawing: false
+      }
+    ],
+    colorPaletteImage: colorPaletteProfnastilImg
   }
 };
 

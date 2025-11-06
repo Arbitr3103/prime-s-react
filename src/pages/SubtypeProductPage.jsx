@@ -36,6 +36,12 @@ import profnastilH114_807DrawingImg from '../assets/images/products/profnastil-h
 import profnastilCKH153DrawingImg from '../assets/images/products/profnastil-ckh153-drawing.jpg';
 import profnastilH153DrawingImg from '../assets/images/products/profnastil-h153-drawing.jpg';
 import profnastilH158DrawingImg from '../assets/images/products/profnastil-h158-drawing.jpg';
+import fasonnieImg from '../assets/images/products/fasonnie.jpg';
+import snegozaderImg from '../assets/images/products/snegozader.jpg';
+import snegozaderPhoto1Img from '../assets/images/products/snegozader-photo1.jpg';
+import snegozaderPhoto2Img from '../assets/images/products/snegozader-photo2.jpg';
+import vodostokImg from '../assets/images/products/vodostok.png';
+import vodostokPhotoImg from '../assets/images/products/vodostok-photo.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -292,6 +298,31 @@ const subtypesData = {
       drawings: [profnastilH158DrawingImg],
       description: 'Профнастил H158 с полезной шириной 785 мм и общей шириной 750 мм. Высокий профиль для кровельных работ.'
     }
+  },
+  fasonelement: {
+    'fasonelement-main': {
+      title: 'Фасонные элементы',
+      image: fasonnieImg,
+      hasDrawing: false,
+      description: 'Доборные элементы для завершения кровельных работ. Обеспечивают герметичность и эстетичный вид. Точная геометрия, защита от протечек, долговечность и простой монтаж.'
+    }
+  },
+  snegozader: {
+    'snegozader-main': {
+      title: 'Снегозадержатель трубчатый',
+      image: snegozaderImg,
+      hasDrawing: false,
+      additionalPhotos: [snegozaderPhoto1Img, snegozaderPhoto2Img],
+      description: 'Системы безопасности для защиты от схода снега с крыши. Надежная защита людей и имущества. Безопасность, надежное крепление, устойчивость к нагрузкам и коррозионная стойкость.'
+    }
+  },
+  vodostsist: {
+    'vodostsist-main': {
+      title: 'Водосточная система',
+      image: vodostokPhotoImg,
+      hasDrawing: false,
+      description: 'Эффективный отвод воды для защиты вашего здания. Предотвращение разрушения фундамента и фасада. Эффективный водоотвод, долговечность, простой монтаж, различные диаметры и коррозионная стойкость.'
+    }
   }
 };
 
@@ -428,6 +459,33 @@ function SubtypeProductPage() {
                     width={subtype.drawingDimensions.width}
                   />
                 )}
+              </div>
+            )}
+
+            {/* Дополнительные фото (если есть) */}
+            {subtype.additionalPhotos && subtype.additionalPhotos.length > 0 && (
+              <div className={styles.drawingSection}>
+                <h2 className={styles.sectionTitle}>Дополнительные фото</h2>
+                <p className={styles.drawingHint}>Нажмите на фото, чтобы увеличить его</p>
+                <div className={styles.drawingsGrid}>
+                  {subtype.additionalPhotos.map((photo, index) => (
+                    <div 
+                      key={index} 
+                      className={styles.drawingImageContainer}
+                      onClick={() => handleDrawingContainerClick(photo)}
+                    >
+                      <img 
+                        src={photo} 
+                        alt={`Фото ${index + 1}`}
+                        className={styles.drawingImage}
+                        onClick={(e) => handleDrawingZoom(photo, e)}
+                      />
+                      <div className={styles.drawingOverlay}>
+                        <span className={styles.drawingOverlayText}>Нажмите на фото для увеличения</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
