@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import styles from "./HomePage.module.css";
 import profnastilImg from "../assets/images/products/profnastil.jpg"; // Профнастил - черный волнистый
 import sandwichImg from "../assets/images/products/sandwich.jpg"; // Сэндвич-панели - слоистая панель
@@ -50,9 +51,9 @@ function HomePage() {
                 <img src={sandwichImg} alt="Сэндвич панели" />
               </div>
               <h3 className={styles.cardTitle}>Сэндвич панели</h3>
-              <a href="/catalog/sandwpan" className={styles.cardButton}>
+              <Link to="/catalog/sandwpan" className={styles.cardButton}>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </div>
 
             {/* Водосточная система */}
@@ -61,9 +62,9 @@ function HomePage() {
                 <img src={vodostokImg} alt="Водосточная система" />
               </div>
               <h3 className={styles.cardTitle}>Водосточная система</h3>
-              <a href="/catalog/vodostsist" className={styles.cardButton}>
+              <Link to="/catalog/vodostsist" className={styles.cardButton}>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </div>
 
             {/* Снегозадержатель трубчатый */}
@@ -72,9 +73,9 @@ function HomePage() {
                 <img src={snegozaderImg} alt="Снегозадержатель трубчатый" />
               </div>
               <h3 className={styles.cardTitle}>Снегозадержатель трубчатый</h3>
-              <a href="/catalog/snegozader" className={styles.cardButton}>
+              <Link to="/catalog/snegozader" className={styles.cardButton}>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -86,9 +87,9 @@ function HomePage() {
                 <img src={profnastilImg} alt="Профнастил" />
               </div>
               <h3 className={styles.cardTitle}>Профнастил</h3>
-              <a href="/catalog/profnastil" className={styles.cardButton}>
+              <Link to="/catalog/profnastil" className={styles.cardButton}>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </div>
 
             {/* Фасонные элементы */}
@@ -97,9 +98,9 @@ function HomePage() {
                 <img src={fasonnieImg} alt="Фасонные элементы" />
               </div>
               <h3 className={styles.cardTitle}>Фасонные элементы</h3>
-              <a href="/catalog/fasonelement" className={styles.cardButton}>
+              <Link to="/catalog/fasonelement" className={styles.cardButton}>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </div>
           </div>
         </div>

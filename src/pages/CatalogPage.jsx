@@ -69,9 +69,14 @@ function CatalogPage() {
                     </ul>
                   </div>
 
-                  <Link to="/contacts" className={styles.contactButton}>
-                    Связаться с нами
-                  </Link>
+                  <div className={styles.actions}>
+                    <Link to={`/catalog/${product.id}`} className={styles.detailsButton}>
+                      Подробнее
+                    </Link>
+                    <Link to="/contacts" className={styles.contactButton}>
+                      Связаться с нами
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
