@@ -24,6 +24,18 @@ import profnastilH114_807Img from '../assets/images/products/profnastil-h114-807
 import profnastilCKH153Img from '../assets/images/products/profnastil-ckh153.jpg';
 import profnastilH153Img from '../assets/images/products/profnastil-h153.jpg';
 import profnastilH158Img from '../assets/images/products/profnastil-h158.jpg';
+import profnastilC8DrawingImg from '../assets/images/products/profnastil-c8-drawing.jpg';
+import profnastilC21DrawingImg from '../assets/images/products/profnastil-c21-drawing.jpg';
+import profnastilHC35DrawingImg from '../assets/images/products/profnastil-hc35-drawing.jpg';
+import profnastilHC44DrawingImg from '../assets/images/products/profnastil-hc44-drawing.jpg';
+import profnastilH57DrawingImg from '../assets/images/products/profnastil-h57-drawing.jpg';
+import profnastilH60DrawingImg from '../assets/images/products/profnastil-h60-drawing.jpg';
+import profnastilH75DrawingImg from '../assets/images/products/profnastil-h75-drawing.jpg';
+import profnastilH114_646DrawingImg from '../assets/images/products/profnastil-h114-646-drawing.jpg';
+import profnastilH114_807DrawingImg from '../assets/images/products/profnastil-h114-807-drawing.jpg';
+import profnastilCKH153DrawingImg from '../assets/images/products/profnastil-ckh153-drawing.jpg';
+import profnastilH153DrawingImg from '../assets/images/products/profnastil-h153-drawing.jpg';
+import profnastilH158DrawingImg from '../assets/images/products/profnastil-h158-drawing.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -199,73 +211,85 @@ const subtypesData = {
     'profnastil-c8-1051-1000': {
       title: 'Профнастил C8 1051/1000',
       image: profnastilC8Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilC8DrawingImg],
       description: 'Профнастил C8 с полезной шириной 1051 мм и общей шириной 1000 мм. Идеален для облицовки фасадов и заборов.'
     },
     'profnastil-c21-1051-1000': {
       title: 'Профнастил C21 1051/1000',
       image: profnastilC21Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilC21DrawingImg],
       description: 'Профнастил C21 с полезной шириной 1051 мм и общей шириной 1000 мм. Отлично подходит для кровельных работ.'
     },
     'profnastil-hc35-1060-1000': {
       title: 'Профнастил HC35 1060/1000',
       image: profnastilHC35Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilHC35DrawingImg],
       description: 'Профнастил HC35 с полезной шириной 1060 мм и общей шириной 1000 мм. Высокий профиль для кровельных работ.'
     },
     'profnastil-hc44-1064-1000': {
       title: 'Профнастил HC44 1064/1000',
       image: profnastilHC44Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilHC44DrawingImg],
       description: 'Профнастил HC44 с полезной шириной 1064 мм и общей шириной 1000 мм. Максимальная прочность для кровельных конструкций.'
     },
     'profnastil-h57-805-750': {
       title: 'Профнастил H57 805/750',
       image: profnastilH57Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH57DrawingImg],
       description: 'Профнастил H57 с полезной шириной 805 мм и общей шириной 750 мм. Высокий профиль для кровельных работ.'
     },
     'profnastil-h60-902-845': {
       title: 'Профнастил H60 902/845',
       image: profnastilH60Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH60DrawingImg],
       description: 'Профнастил H60 с полезной шириной 902 мм и общей шириной 845 мм. Максимальная прочность для кровельных конструкций.'
     },
     'profnastil-h75-800-750': {
       title: 'Профнастил H75 800/750',
       image: profnastilH75Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH75DrawingImg],
       description: 'Профнастил H75 с полезной шириной 800 мм и общей шириной 750 мм. Высокий профиль для кровельных работ.'
     },
     'profnastil-h114-646-600': {
       title: 'Профнастил H114 646/600',
       image: profnastilH114_646Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH114_646DrawingImg],
       description: 'Профнастил H114 с полезной шириной 646 мм и общей шириной 600 мм. Максимальная прочность для кровельных конструкций.'
     },
     'profnastil-h114-807-750': {
       title: 'Профнастил H114 807/750',
       image: profnastilH114_807Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH114_807DrawingImg],
       description: 'Профнастил H114 с полезной шириной 807 мм и общей шириной 750 мм. Максимальная прочность для кровельных конструкций.'
     },
     'profnastil-ckh153-826-800': {
       title: 'Профнастил CKH153 826/800',
       image: profnastilCKH153Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilCKH153DrawingImg],
       description: 'Профнастил CKH153 с полезной шириной 826 мм и общей шириной 800 мм. Специальный профиль для кровельных работ.'
     },
     'profnastil-h153-965-900': {
       title: 'Профнастил H153 965/900',
       image: profnastilH153Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH153DrawingImg],
       description: 'Профнастил H153 с полезной шириной 965 мм и общей шириной 900 мм. Максимальная прочность для кровельных конструкций.'
     },
     'profnastil-h158-785-750': {
       title: 'Профнастил H158 785/750',
       image: profnastilH158Img,
-      hasDrawing: false,
+      hasDrawing: true,
+      drawings: [profnastilH158DrawingImg],
       description: 'Профнастил H158 с полезной шириной 785 мм и общей шириной 750 мм. Высокий профиль для кровельных работ.'
     }
   }
