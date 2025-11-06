@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import styles from './SubtypeProductPage.module.css';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
@@ -174,6 +175,9 @@ function SubtypeProductPage() {
   const { productId, subtypeId } = useParams();
   const productSubtypes = subtypesData[productId];
   const subtype = productSubtypes?.[subtypeId];
+  
+  // Состояние для отслеживания текущего отображаемого изображения
+  const [currentImage, setCurrentImage] = useState(subtype?.image || null);
 
   if (!subtype) {
     return (
@@ -187,6 +191,16 @@ function SubtypeProductPage() {
       </div>
     );
   }
+
+  // Обработчик клика на чертеж
+  const handleDrawingClick = (drawing) => {
+    setCurrentImage(drawing);
+  };
+
+  // Обработчик клика на основное фото для возврата к исходному
+  const handleMainImageClick = () => {
+    setCurrentImage(subtype.image);
+  };
 
   return (
     <div className={styles.subtypePage}>
@@ -202,10 +216,21 @@ function SubtypeProductPage() {
       <section className={styles.contentSection}>
         <div className={styles.container}>
           <div className={styles.productDetails}>
-            {/* Фото продукта */}
+            {/* Фото продукта / Чертеж */}
             <div className={styles.productImageContainer}>
               <div className={styles.productImage}>
-                <img src={subtype.image} alt={subtype.title} />
+                <img 
+                  src={currentImage} 
+                  alt={currentImage === subtype.image ? subtype.title : 'Технический чертеж'}
+                  onClick={handleMainImageClick}
+                  className={currentImage !== subtype.image ? styles.clickableImage : ''}
+                  title={currentImage !== subtype.image ? 'Нажмите, чтобы вернуться к фото продукта' : ''}
+                />
+                {currentImage !== subtype.image && (
+                  <div className={styles.imageHint}>
+                    Нажмите на изображение, чтобы вернуться к фото продукта
+                  </div>
+                )}
               </div>
             </div>
 
@@ -213,15 +238,23 @@ function SubtypeProductPage() {
             {subtype.hasDrawing && (
               <div className={styles.drawingSection}>
                 <h2 className={styles.sectionTitle}>Технические чертежи</h2>
+                <p className={styles.drawingHint}>Нажмите на чертеж, чтобы увеличить его</p>
                 {subtype.drawings && subtype.drawings.length > 0 ? (
                   <div className={styles.drawingsGrid}>
                     {subtype.drawings.map((drawing, index) => (
-                      <div key={index} className={styles.drawingImageContainer}>
+                      <div 
+                        key={index} 
+                        className={styles.drawingImageContainer}
+                        onClick={() => handleDrawingClick(drawing)}
+                      >
                         <img 
                           src={drawing} 
                           alt={`Чертеж ${index + 1}`}
                           className={styles.drawingImage}
                         />
+                        <div className={styles.drawingOverlay}>
+                          <span className={styles.drawingOverlayText}>Нажмите для увеличения</span>
+                        </div>
                       </div>
                     ))}
                   </div>
