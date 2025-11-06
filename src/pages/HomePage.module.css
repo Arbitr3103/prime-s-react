@@ -305,7 +305,7 @@
 .whyUsSection {
   min-height: 100vh;
   padding: var(--spacing-xl) 0 var(--spacing-2xl);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://optim.tildacdn.com/tild6162-3163-4361-b661-376130363765/-/cover/1920x1080/center/center/-/format/webp/6.jpg.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://optim.tildacdn.com/tild3765-6334-4331-b366-653361303037/-/format/webp/erikheddema1380.jpg.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
