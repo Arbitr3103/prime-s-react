@@ -103,15 +103,18 @@ const productsData = {
     subtypes: [
       {
         title: 'Сэндвич панель стеновая базальт',
-        image: sandwichImg
+        image: sandwichImg,
+        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
       },
       {
         title: 'Сэндвич панель кровельная базальт',
-        image: sandwichImg
+        image: sandwichImg,
+        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
       },
       {
         title: 'Сэндвич панель стеновая PIR',
-        image: sandwichImg
+        image: sandwichImg,
+        drawing: sandwichImg // Временно, нужно заменить на реальный чертеж
       }
     ],
     colorPalette: [
@@ -225,8 +228,19 @@ function ProductPage() {
               <div className={styles.subtypesGrid}>
                 {product.subtypes.map((subtype, index) => (
                   <div key={index} className={styles.subtypeCard}>
-                    <div className={styles.subtypeImage}>
-                      <img src={subtype.image} alt={subtype.title} />
+                    <div className={styles.subtypeImageContainer}>
+                      <img 
+                        src={subtype.image} 
+                        alt={subtype.title}
+                        className={styles.subtypeImage}
+                      />
+                      {subtype.drawing && (
+                        <img 
+                          src={subtype.drawing} 
+                          alt={`${subtype.title} - чертеж`}
+                          className={styles.subtypeDrawing}
+                        />
+                      )}
                     </div>
                     <h3 className={styles.subtypeTitle}>{subtype.title}</h3>
                   </div>
