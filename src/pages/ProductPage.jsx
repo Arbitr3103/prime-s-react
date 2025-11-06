@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import styles from './ProductPage.module.css';
 import profnastilImg from '../assets/images/products/profnastil.jpg';
 import profnastilC8Img from '../assets/images/products/profnastil-c8.jpg';
@@ -310,6 +310,7 @@ const productsData = {
  */
 function ProductPage() {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const product = productsData[productId];
 
   if (!product) {
@@ -393,9 +394,12 @@ function ProductPage() {
                 <p className={styles.contactText}>
                   Свяжитесь с нами для получения подробной информации и расчета стоимости
                 </p>
-                <Link to="/contacts" className={styles.contactButton}>
+                <button 
+                  onClick={() => navigate('/contacts')} 
+                  className={styles.contactButton}
+                >
                   Связаться с нами
-                </Link>
+                </button>
               </div>
             </div>
           </div>
