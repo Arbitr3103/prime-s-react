@@ -163,53 +163,46 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Секция контактов */}
+      {/* Секция контактов (как на оригинале) */}
       <section className={styles.contactSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Контакты</h2>
-          <div className={styles.contactGrid}>
-            <div className={styles.contactCard}>
-              <h3 className={styles.contactCardTitle}>Телефон</h3>
-              <a href="tel:+79872647000" className={styles.contactCardLink}>
-                +7 (987) 264-70-00
-              </a>
-              <p className={styles.contactCardText}>Звоните с 9:00 до 18:00</p>
-            </div>
-            <div className={styles.contactCard}>
-              <h3 className={styles.contactCardTitle}>WhatsApp</h3>
+          <h2 className={styles.contactHeading}>Наши контакты</h2>
+          <div className={styles.contactContent}>
+            <p className={styles.contactText}>Офис :</p>
+            <p className={styles.contactText}>
+              г. Набережные Челны, ул. Машиностроительная 39/4,
+              <br />2 этаж, офис 7, офис 8
+            </p>
+
+            <p className={styles.contactText}>Отдел продаж :</p>
+            <p className={styles.contactText}>Тел : +7(986) - 826- 7777</p>
+            <p className={styles.contactText}>Тел : +7(986) - 822- 7777</p>
+            <p className={styles.contactText}>E-mail : info@prime-s.ru</p>
+
+            <p className={styles.contactText}>Отдел бухгалтерии :</p>
+            <p className={styles.contactText}>E-mail : buh@prime-s.ru</p>
+
+            <p className={styles.contactText}>ИНН 1650441170</p>
+
+            <div style={{ marginTop: '24px' }}>
               <a
+                className={styles.messengerLink}
                 href="https://api.whatsapp.com/send/?phone=79872647000&text&type=phone_number&app_absent=0"
-                className={styles.contactCardLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ marginRight: '12px' }}
               >
-                Написать в WhatsApp
+                Whatsapp
               </a>
-              <p className={styles.contactCardText}>
-                Быстрый ответ в мессенджере
-              </p>
-            </div>
-            <div className={styles.contactCard}>
-              <h3 className={styles.contactCardTitle}>Telegram</h3>
               <a
+                className={styles.messengerLink}
                 href="https://t.me/z1ganshin"
-                className={styles.contactCardLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Написать в Telegram
+                Telegram
               </a>
-              <p className={styles.contactCardText}>Онлайн консультация</p>
             </div>
-          </div>
-          <div className={styles.workingHours}>
-            <h3 className={styles.workingHoursTitle}>Режим работы</h3>
-            <p className={styles.workingHoursText}>
-              Понедельник - Пятница: 9:00 - 18:00
-            </p>
-            <p className={styles.workingHoursText}>
-              Суббота - Воскресенье: Выходной
-            </p>
           </div>
         </div>
       </section>
