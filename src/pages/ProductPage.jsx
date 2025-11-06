@@ -3,6 +3,7 @@ import styles from './ProductPage.module.css';
 import profnastilImg from '../assets/images/products/profnastil.jpg';
 import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
+import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
 import fasonnieImg from '../assets/images/products/fasonnie.jpg';
 import snegozaderImg from '../assets/images/products/snegozader.jpg';
 import vodostokImg from '../assets/images/products/vodostok.png';
@@ -111,7 +112,7 @@ const productsData = {
       {
         id: 'sendvich-panel-krovelnaya-bazalt',
         title: 'Сэндвич панель кровельная базальт',
-        image: sandwichImg,
+        image: sandwichKrovelnayaBazaltImg,
         hasDrawing: true,
         drawingDimensions: {
           height: 41,

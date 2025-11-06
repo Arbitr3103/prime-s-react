@@ -5,6 +5,8 @@ import sandwichImg from '../assets/images/products/sandwich.jpg';
 import sandwichStenovayaBazaltImg from '../assets/images/products/sandwich-stenovaya-bazalt.jpg';
 import sandwichStenovayaBazaltDrawing1 from '../assets/images/products/sandwich-stenovaya-bazalt-drawing1.jpg';
 import sandwichStenovayaBazaltDrawing2 from '../assets/images/products/sandwich-stenovaya-bazalt-drawing2.jpg';
+import sandwichKrovelnayaBazaltImg from '../assets/images/products/sandwich-krovelnaya-bazalt.jpg';
+import sandwichKrovelnayaBazaltDrawing from '../assets/images/products/sandwich-krovelnaya-bazalt-drawing.jpg';
 
 /**
  * Компонент для отображения технического чертежа кровельной панели
@@ -151,12 +153,11 @@ const subtypesData = {
     },
     'sendvich-panel-krovelnaya-bazalt': {
       title: 'Сэндвич панель кровельная базальт',
-      image: sandwichImg,
+      image: sandwichKrovelnayaBazaltImg,
       hasDrawing: true,
-      drawingDimensions: {
-        height: 41,
-        width: 1000
-      },
+      drawings: [
+        sandwichKrovelnayaBazaltDrawing
+      ],
       description: 'Кровельная сэндвич-панель с утеплителем из базальтовой ваты. Специальный профиль для эффективного водоотвода.'
     },
     'sendvich-panel-stenovaya-pir': {
