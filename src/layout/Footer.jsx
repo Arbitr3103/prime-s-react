@@ -18,16 +18,16 @@ function YandexMap() {
         window.ymaps.ready(() => {
           if (mapRef.current) {
             const map = new window.ymaps.Map(mapRef.current, {
-              center: [55.713872, 52.406429], // г. Набережные Челны, ул. Машиностроительная 39/4
+              center: [55.71017, 52.393372], // г. Набережные Челны, ул. Машиностроительная, 2а к1
               zoom: 16,
               controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
             });
 
             // Добавляем маркер
             const placemark = new window.ymaps.Placemark(
-              [55.713872, 52.406429],
+              [55.71017, 52.393372],
               {
-                balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная 39/4, 2 этаж, офис 7, офис 8'
+                balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная, 2а к1, 2 этаж, офис 3, 4'
               },
               {
                 preset: 'islands#blueDotIcon'
@@ -43,15 +43,15 @@ function YandexMap() {
       window.ymaps.ready(() => {
         if (mapRef.current) {
           const map = new window.ymaps.Map(mapRef.current, {
-            center: [55.713872, 52.406429],
+            center: [55.71017, 52.393372],
             zoom: 16,
             controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
           });
 
           const placemark = new window.ymaps.Placemark(
-            [55.713872, 52.406429],
+            [55.71017, 52.393372],
             {
-              balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная 39/4, 2 этаж, офис 7, офис 8'
+              balloonContent: 'ООО ПраймСтрой<br>г. Набережные Челны, ул. Машиностроительная, 2а к1, 2 этаж, офис 3, 4'
             },
             {
               preset: 'islands#blueDotIcon'

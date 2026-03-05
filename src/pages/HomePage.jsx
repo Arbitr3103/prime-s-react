@@ -173,8 +173,8 @@ function HomePage() {
               <div className={styles.contactColumn}>
                 <p className={styles.contactText}>Офис :</p>
                 <p className={styles.contactText}>
-                  г. Набережные Челны, ул. Машиностроительная 39/4,
-                  <br />2 этаж, офис 7, офис 8
+                  г. Набережные Челны, ул. Машиностроительная, 2а к1,
+                  <br />2 этаж, офис 3, 4
                 </p>
 
                 <p className={styles.contactText}>Отдел продаж :</p>
